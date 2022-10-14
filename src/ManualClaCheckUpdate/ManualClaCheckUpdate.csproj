@@ -8,7 +8,7 @@
     <ItemGroup>
       <PackageReference Include="CommandLineParser" Version="2.9.1" />
       <PackageReference Include="GitHubJwt" Version="0.0.4" />
-      <PackageReference Include="GitOps.Clients.GitHub" Version="0.1.153" />
+      <PackageReference Include="GitOps.Clients.GitHub" Version="*" />
       <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
     </ItemGroup>
 
