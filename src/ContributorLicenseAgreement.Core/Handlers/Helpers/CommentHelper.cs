@@ -37,6 +37,10 @@ namespace ContributorLicenseAgreement.Core.Handlers.Helpers
 
         internal async Task<Comment> GenerateClaCommentAsync(Cla primitive, GitOpsPayload payload, bool cla, string gitHubUser)
         {
+            var gitHubAppName = await clientAdapterFactory.GetAppNameBasedOnInstallationId(
+                payload.PlatformContext.OrganizationName,
+                payload.PlatformContext.InstallationId) ?? flavorSettings[payload.PlatformContext.Dns].Name;
+
             if (payload.PlatformContext.ActionType == PlatformEventActions.Synchronize && !cla)
             {
                 var ghClient = await clientAdapterFactory.GetGitHubClientAdapterAsync(
@@ -47,7 +51,7 @@ namespace ContributorLicenseAgreement.Core.Handlers.Helpers
 
                 foreach (var comment in comments)
                 {
-                    if (comment.User.Login.Equals($"{flavorSettings[payload.PlatformContext.Dns].Name}[bot]") && comment.Body.Contains("please read the following Contributor License Agreement(CLA)."))
+                    if (comment.User.Login.Equals($"{gitHubAppName}[bot]") && comment.Body.Contains("please read the following Contributor License Agreement(CLA)."))
                     {
                         return new Comment { KeepHistory = true };
                     }
@@ -67,11 +71,11 @@ namespace ContributorLicenseAgreement.Core.Handlers.Helpers
             {
                 User = gitHubUser,
                 CLA = agreement.Cla.Content,
-                Bot = flavorSettings[payload.PlatformContext.Dns].Name
+                Bot = gitHubAppName
             };
 
             return GenerateComment(
-                $"{typeof(ContributorLicenseAgreement.Core.CLA).Namespace}.CLA.mustache", mustacheParams);
+                $"{typeof(CLA).Namespace}.CLA.mustache", mustacheParams);
         }
 
         internal Comment GenerateFailureComment(string gitHubUser, string company)
@@ -83,19 +87,23 @@ namespace ContributorLicenseAgreement.Core.Handlers.Helpers
             };
 
             return GenerateComment(
-                $"{typeof(ContributorLicenseAgreement.Core.CLA).Namespace}.CLA-Error-Company.mustache", mustacheParams);
+                $"{typeof(CLA).Namespace}.CLA-Error-Company.mustache", mustacheParams);
         }
 
         internal Comment GenerateFailureComment(GitOpsPayload payload, string gitHubUser)
         {
+            var gitHubAppName = clientAdapterFactory.GetAppNameBasedOnInstallationId(
+                payload.PlatformContext.OrganizationName,
+                payload.PlatformContext.InstallationId).Result ?? flavorSettings[payload.PlatformContext.Dns].Name;
+
             var mustacheParams = new
             {
                 User = gitHubUser,
-                Bot = flavorSettings[payload.PlatformContext.Dns].Name
+                Bot = gitHubAppName
             };
 
             return GenerateComment(
-                $"{typeof(ContributorLicenseAgreement.Core.CLA).Namespace}.CLA-Error.mustache", mustacheParams);
+                $"{typeof(CLA).Namespace}.CLA-Error.mustache", mustacheParams);
         }
 
         internal Comment GenerateComment(string fileName, object mustacheParams)

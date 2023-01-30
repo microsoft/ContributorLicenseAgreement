@@ -204,13 +204,13 @@ namespace ContributorLicenseAgreement.Core.Tests
             var serviceCollection = new ServiceCollection();
             serviceCollection.AddSingleton<PrimitiveCollection>();
             serviceCollection.RegisterAppEventHandlerOrchestrator();
-            serviceCollection.AddSingleton<ILogger<CLA>>(mockLogger.Object);
-            serviceCollection.AddSingleton<IAadRequestClient>(mockAadClient.Object);
-            serviceCollection.AddSingleton<IGitHubClientAdapterFactory>(mockFactory.Object);
-            serviceCollection.AddSingleton<IOSPOGitHubLinkRestClient>(mockGitHubLinkClient.Object);
-            serviceCollection.AddSingleton<IBlobStorage>(mockBlobStorage.Object);
+            serviceCollection.AddSingleton(mockLogger.Object);
+            serviceCollection.AddSingleton(mockAadClient.Object);
+            serviceCollection.AddSingleton(mockFactory.Object);
+            serviceCollection.AddSingleton(mockGitHubLinkClient.Object);
+            serviceCollection.AddSingleton(mockBlobStorage.Object);
             serviceCollection.AddSingleton(platformAppFlavorSettings);
-            serviceCollection.AddSingleton<IHttpClientFactory>(mockIHttpClientFactory.Object);
+            serviceCollection.AddSingleton(mockIHttpClientFactory.Object);
 
             ServiceProvider = serviceCollection.BuildServiceProvider();
             var appState = new AppState(mockBlobStorage.Object, new Lazy<AppBase>(() => ServiceProvider.GetRequiredService<CLA>()));

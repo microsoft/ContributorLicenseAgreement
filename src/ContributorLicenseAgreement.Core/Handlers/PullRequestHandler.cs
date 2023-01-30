@@ -102,7 +102,7 @@ namespace ContributorLicenseAgreement.Core.Handlers
 
                 appOutput.States ??= new States
                 {
-                    StateCollection = new System.Collections.Generic.Dictionary<string, object>()
+                    StateCollection = new Dictionary<string, object>()
                 };
 
                 appOutput.States.StateCollection.Add(
@@ -134,7 +134,7 @@ namespace ContributorLicenseAgreement.Core.Handlers
 
         private async Task<bool> HasSignedClaAsync(AppOutput appOutput, GitOpsPayload gitOpsPayload, bool autoSignMsftEmployee, string claLink)
         {
-            var cla = await appState.ReadState<ContributorLicenseAgreement.Core.Handlers.Model.SignedCla>(ClaHelper.GenerateRetrievalKey(gitOpsPayload.PullRequest.User, claLink));
+            var cla = await appState.ReadState<SignedCla>(ClaHelper.GenerateRetrievalKey(gitOpsPayload.PullRequest.User, claLink));
 
             if (cla == null || (cla.Employee && cla.MsftMail == null))
             {

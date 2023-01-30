@@ -103,7 +103,7 @@ namespace ContributorLicenseAgreement.Core.Handlers.Helpers
 
             return new States
             {
-                StateCollection = new System.Collections.Generic.Dictionary<string, object>
+                StateCollection = new Dictionary<string, object>
                 {
                     {
                         key,

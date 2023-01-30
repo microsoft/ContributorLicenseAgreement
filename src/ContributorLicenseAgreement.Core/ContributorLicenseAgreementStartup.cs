@@ -1,4 +1,9 @@
-﻿namespace ContributorLicenseAgreement.Core
+﻿/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the Microsoft License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+namespace ContributorLicenseAgreement.Core
 {
     using System.Diagnostics.CodeAnalysis;
     using ContributorLicenseAgreement.Core.Handlers;
@@ -34,7 +39,7 @@
                     true));
             var gitHubLinkSettings =
                 configuration.GetSection(nameof(OspoGitHubLinkSettings)).Get<OspoGitHubLinkSettings>();
-            serviceCollection.AddSingleton<OspoGitHubLinkSettings>(gitHubLinkSettings);
+            serviceCollection.AddSingleton(gitHubLinkSettings);
             serviceCollection.AddSingleton<IOSPOGitHubLinkRestClient, OSPOGitHubLinkRestClient>();
             serviceCollection.AddSingleton<PrimitiveCollection>();
             serviceCollection.RegisterAad(configuration);

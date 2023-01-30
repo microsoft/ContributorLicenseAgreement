@@ -39,7 +39,7 @@ namespace ContributorLicenseAgreement.Core.Handlers.Helpers
 
         internal SignedCla CreateCla(bool isEmployee, string gitHubUser, AppOutput appOutput, string company, string claLink, string msftMail = null)
         {
-            var cla = new ContributorLicenseAgreement.Core.Handlers.Model.SignedCla
+            var cla = new SignedCla
             {
                 Employee = isEmployee,
                 Signed = System.DateTimeOffset.Now.ToUnixTimeMilliseconds(),
@@ -57,12 +57,12 @@ namespace ContributorLicenseAgreement.Core.Handlers.Helpers
 
         internal (States, IEnumerable<SignedCla>) CreateClas(List<string> gitHubUsers, string company, string claLink)
         {
-            var dict = new System.Collections.Generic.Dictionary<string, object>();
+            var dict = new Dictionary<string, object>();
             var clas = new List<SignedCla>();
 
             foreach (var gitHubUser in gitHubUsers)
             {
-                var cla = new ContributorLicenseAgreement.Core.Handlers.Model.SignedCla
+                var cla = new SignedCla
                 {
                     Signed = System.DateTimeOffset.Now.ToUnixTimeMilliseconds(),
                     Expires = null,
@@ -82,7 +82,7 @@ namespace ContributorLicenseAgreement.Core.Handlers.Helpers
 
         internal async Task<SignedCla> ExpireCla(string gitHubUser, string claLink, bool user = true)
         {
-            var cla = await appState.ReadState<ContributorLicenseAgreement.Core.Handlers.Model.SignedCla>(GenerateRetrievalKey(gitHubUser, claLink));
+            var cla = await appState.ReadState<SignedCla>(GenerateRetrievalKey(gitHubUser, claLink));
             if (cla == null)
             {
                 logger.LogError("No cla to terminate");
@@ -100,12 +100,12 @@ namespace ContributorLicenseAgreement.Core.Handlers.Helpers
             return cla;
         }
 
-        internal States GenerateStates(string gitHubUser, string claLink, ContributorLicenseAgreement.Core.Handlers.Model.SignedCla cla)
+        internal States GenerateStates(string gitHubUser, string claLink, SignedCla cla)
         {
             {
                 return new States
                 {
-                    StateCollection = new System.Collections.Generic.Dictionary<string, object> { { GenerateKey(gitHubUser, claLink), cla } }
+                    StateCollection = new Dictionary<string, object> { { GenerateKey(gitHubUser, claLink), cla } }
                 };
             }
         }

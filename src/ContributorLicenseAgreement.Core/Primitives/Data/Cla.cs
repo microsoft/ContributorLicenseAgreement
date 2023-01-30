@@ -7,6 +7,7 @@ namespace ContributorLicenseAgreement.Core.Primitives.Data
 {
     using System.Collections.Generic;
     using GitOps.Primitives.Abstractions;
+    using GitOps.Primitives.Yml;
 
     /// <summary>
     /// Use this to define the primitive.
@@ -17,8 +18,11 @@ namespace ContributorLicenseAgreement.Core.Primitives.Data
     /// The app can define any kind of model here and then implement a
     /// corresponding behavior of this primitive.
     /// </summary>
+    [YmlFieldAlias("claPrimitive", YmlFieldTag.Obsolete)]
     public sealed class Cla : IPrimitive
     {
+        [YmlFieldAlias("claContent", YmlFieldTag.Obsolete)]
+        [YmlFieldAlias("content")]
         public string Content { get; set; }
 
         public MinimalChangeRequired MinimalChangeRequired { get; set; }

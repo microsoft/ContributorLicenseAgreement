@@ -5,7 +5,6 @@
 
 namespace ContributorLicenseAgreement.Core
 {
-    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
     using ContributorLicenseAgreement.Core.Primitives.Data;
@@ -40,28 +39,6 @@ namespace ContributorLicenseAgreement.Core
             var primitives = (await primitiveCollection.GetOrgPolicies(gitOpsPayload))
                 .Where(p => p is Cla)
                 .Cast<Cla>();
-
-            if (!primitives.Any())
-            {
-                var legacyPrimitives = (await primitiveCollection.GetOrgPolicies(gitOpsPayload))
-                    .Where(p => p is ClaPrimitive)
-                    .Cast<ClaPrimitive>();
-                if (legacyPrimitives.Any())
-                {
-                    var tmpPrimitive = legacyPrimitives.First();
-                    var newPrimitive = new Cla
-                    {
-                        AutoSignMsftEmployee = tmpPrimitive.AutoSignMsftEmployee,
-                        BypassOrgs = tmpPrimitive.BypassOrgs,
-                        BypassUsers = tmpPrimitive.BypassUsers,
-                        Content = tmpPrimitive.ClaContent,
-                        MinimalChangeRequired = tmpPrimitive.MinimalChangeRequired,
-                        ProhibitedCompanies = tmpPrimitive.ProhibitedCompanies,
-                        SignRepos = tmpPrimitive.SignRepos
-                    };
-                    primitives = new List<Cla> { newPrimitive };
-                }
-            }
 
             await appEventHandlerOrchestrator.HandleEvent(gitOpsPayload, appOutput, primitives, Id);
 

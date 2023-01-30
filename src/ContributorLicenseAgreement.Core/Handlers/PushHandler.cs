@@ -94,7 +94,7 @@ namespace ContributorLicenseAgreement.Core.Handlers
             var (states, clas) = claHelper.CreateClas(
                 additions, companyName, primitive.Content);
 
-            List<ContributorLicenseAgreement.Core.Handlers.Model.Check> checks = null;
+            List<Model.Check> checks = null;
             foreach (var user in removals)
             {
                 checks = await checkHelper.UpdateChecksAsync(gitOpsPayload, false, user, primitive.Content, primitive.CheckSummary);
