@@ -15,6 +15,7 @@ namespace ContributorLicenseAgreement.Core.Handlers.Helpers
     using GitOps.Apps.Abstractions.AppStates;
     using GitOps.Apps.Abstractions.Models;
     using GitOps.Clients.Aad;
+    using GitOps.Clients.GitHub;
     using GitOps.Clients.Ospo;
     using Microsoft.Extensions.Logging;
     using Polly;
@@ -29,6 +30,7 @@ namespace ContributorLicenseAgreement.Core.Handlers.Helpers
         private readonly IOSPOGitHubLinkRestClient gitHubLinkClient;
         private readonly CheckHelper checkHelper;
         private readonly CommentHelper commentHelper;
+        private readonly IGitHubClientAdapterFactory factory;
 
         public ClaHelper(
             AppState appState,
@@ -37,7 +39,8 @@ namespace ContributorLicenseAgreement.Core.Handlers.Helpers
             CheckHelper checkHelper,
             CommentHelper commentHelper,
             ILogger<CLA> logger,
-            LoggingHelper loggingHelper)
+            LoggingHelper loggingHelper,
+            IGitHubClientAdapterFactory factory)
         {
             this.appState = appState;
             this.logger = logger;
@@ -46,6 +49,7 @@ namespace ContributorLicenseAgreement.Core.Handlers.Helpers
             this.gitHubLinkClient = gitHubLinkClient;
             this.checkHelper = checkHelper;
             this.commentHelper = commentHelper;
+            this.factory = factory;
         }
 
         internal static string GenerateKey(string gitHubUser, string claLink)
@@ -60,17 +64,19 @@ namespace ContributorLicenseAgreement.Core.Handlers.Helpers
             return GenerateKey(user, claLink);
         }
 
-        internal static bool NeedsLicense(Cla primitive, PullRequest pullRequest)
+        internal static bool NeedsLicense(Cla primitive, PullRequest pullRequest, string origin)
         {
             return !primitive.BypassUsers.Contains(pullRequest.User)
-                   && !primitive.BypassOrgs.Contains(pullRequest.OrganizationName)
+                   && !primitive.BypassOrgs.Contains(origin)
                    && (pullRequest.Files.Sum(f => f.Changes) >= primitive.MinimalChangeRequired.CodeLines
                        || pullRequest.Files.Count >= primitive.MinimalChangeRequired.Files);
         }
 
         internal async Task RunCheck(GitOpsPayload gitOpsPayload, Cla primitive, AppOutput appOutput)
         {
-            if (NeedsLicense(primitive, gitOpsPayload.PullRequest))
+            using var client = await factory.GetGitHubClientAdapterAsync(gitOpsPayload.PlatformContext.OrganizationName, gitOpsPayload.PlatformContext.Dns);
+            var pr = await client.GetPullRequestAsync(long.Parse(gitOpsPayload.PullRequest.RepositoryId), gitOpsPayload.PullRequest.Number);
+            if (NeedsLicense(primitive, gitOpsPayload.PullRequest, pr.Head.Repository.Owner.Login))
             {
                 logger.LogInformation("License needed for {Sender}", gitOpsPayload.PullRequest.User);
 
