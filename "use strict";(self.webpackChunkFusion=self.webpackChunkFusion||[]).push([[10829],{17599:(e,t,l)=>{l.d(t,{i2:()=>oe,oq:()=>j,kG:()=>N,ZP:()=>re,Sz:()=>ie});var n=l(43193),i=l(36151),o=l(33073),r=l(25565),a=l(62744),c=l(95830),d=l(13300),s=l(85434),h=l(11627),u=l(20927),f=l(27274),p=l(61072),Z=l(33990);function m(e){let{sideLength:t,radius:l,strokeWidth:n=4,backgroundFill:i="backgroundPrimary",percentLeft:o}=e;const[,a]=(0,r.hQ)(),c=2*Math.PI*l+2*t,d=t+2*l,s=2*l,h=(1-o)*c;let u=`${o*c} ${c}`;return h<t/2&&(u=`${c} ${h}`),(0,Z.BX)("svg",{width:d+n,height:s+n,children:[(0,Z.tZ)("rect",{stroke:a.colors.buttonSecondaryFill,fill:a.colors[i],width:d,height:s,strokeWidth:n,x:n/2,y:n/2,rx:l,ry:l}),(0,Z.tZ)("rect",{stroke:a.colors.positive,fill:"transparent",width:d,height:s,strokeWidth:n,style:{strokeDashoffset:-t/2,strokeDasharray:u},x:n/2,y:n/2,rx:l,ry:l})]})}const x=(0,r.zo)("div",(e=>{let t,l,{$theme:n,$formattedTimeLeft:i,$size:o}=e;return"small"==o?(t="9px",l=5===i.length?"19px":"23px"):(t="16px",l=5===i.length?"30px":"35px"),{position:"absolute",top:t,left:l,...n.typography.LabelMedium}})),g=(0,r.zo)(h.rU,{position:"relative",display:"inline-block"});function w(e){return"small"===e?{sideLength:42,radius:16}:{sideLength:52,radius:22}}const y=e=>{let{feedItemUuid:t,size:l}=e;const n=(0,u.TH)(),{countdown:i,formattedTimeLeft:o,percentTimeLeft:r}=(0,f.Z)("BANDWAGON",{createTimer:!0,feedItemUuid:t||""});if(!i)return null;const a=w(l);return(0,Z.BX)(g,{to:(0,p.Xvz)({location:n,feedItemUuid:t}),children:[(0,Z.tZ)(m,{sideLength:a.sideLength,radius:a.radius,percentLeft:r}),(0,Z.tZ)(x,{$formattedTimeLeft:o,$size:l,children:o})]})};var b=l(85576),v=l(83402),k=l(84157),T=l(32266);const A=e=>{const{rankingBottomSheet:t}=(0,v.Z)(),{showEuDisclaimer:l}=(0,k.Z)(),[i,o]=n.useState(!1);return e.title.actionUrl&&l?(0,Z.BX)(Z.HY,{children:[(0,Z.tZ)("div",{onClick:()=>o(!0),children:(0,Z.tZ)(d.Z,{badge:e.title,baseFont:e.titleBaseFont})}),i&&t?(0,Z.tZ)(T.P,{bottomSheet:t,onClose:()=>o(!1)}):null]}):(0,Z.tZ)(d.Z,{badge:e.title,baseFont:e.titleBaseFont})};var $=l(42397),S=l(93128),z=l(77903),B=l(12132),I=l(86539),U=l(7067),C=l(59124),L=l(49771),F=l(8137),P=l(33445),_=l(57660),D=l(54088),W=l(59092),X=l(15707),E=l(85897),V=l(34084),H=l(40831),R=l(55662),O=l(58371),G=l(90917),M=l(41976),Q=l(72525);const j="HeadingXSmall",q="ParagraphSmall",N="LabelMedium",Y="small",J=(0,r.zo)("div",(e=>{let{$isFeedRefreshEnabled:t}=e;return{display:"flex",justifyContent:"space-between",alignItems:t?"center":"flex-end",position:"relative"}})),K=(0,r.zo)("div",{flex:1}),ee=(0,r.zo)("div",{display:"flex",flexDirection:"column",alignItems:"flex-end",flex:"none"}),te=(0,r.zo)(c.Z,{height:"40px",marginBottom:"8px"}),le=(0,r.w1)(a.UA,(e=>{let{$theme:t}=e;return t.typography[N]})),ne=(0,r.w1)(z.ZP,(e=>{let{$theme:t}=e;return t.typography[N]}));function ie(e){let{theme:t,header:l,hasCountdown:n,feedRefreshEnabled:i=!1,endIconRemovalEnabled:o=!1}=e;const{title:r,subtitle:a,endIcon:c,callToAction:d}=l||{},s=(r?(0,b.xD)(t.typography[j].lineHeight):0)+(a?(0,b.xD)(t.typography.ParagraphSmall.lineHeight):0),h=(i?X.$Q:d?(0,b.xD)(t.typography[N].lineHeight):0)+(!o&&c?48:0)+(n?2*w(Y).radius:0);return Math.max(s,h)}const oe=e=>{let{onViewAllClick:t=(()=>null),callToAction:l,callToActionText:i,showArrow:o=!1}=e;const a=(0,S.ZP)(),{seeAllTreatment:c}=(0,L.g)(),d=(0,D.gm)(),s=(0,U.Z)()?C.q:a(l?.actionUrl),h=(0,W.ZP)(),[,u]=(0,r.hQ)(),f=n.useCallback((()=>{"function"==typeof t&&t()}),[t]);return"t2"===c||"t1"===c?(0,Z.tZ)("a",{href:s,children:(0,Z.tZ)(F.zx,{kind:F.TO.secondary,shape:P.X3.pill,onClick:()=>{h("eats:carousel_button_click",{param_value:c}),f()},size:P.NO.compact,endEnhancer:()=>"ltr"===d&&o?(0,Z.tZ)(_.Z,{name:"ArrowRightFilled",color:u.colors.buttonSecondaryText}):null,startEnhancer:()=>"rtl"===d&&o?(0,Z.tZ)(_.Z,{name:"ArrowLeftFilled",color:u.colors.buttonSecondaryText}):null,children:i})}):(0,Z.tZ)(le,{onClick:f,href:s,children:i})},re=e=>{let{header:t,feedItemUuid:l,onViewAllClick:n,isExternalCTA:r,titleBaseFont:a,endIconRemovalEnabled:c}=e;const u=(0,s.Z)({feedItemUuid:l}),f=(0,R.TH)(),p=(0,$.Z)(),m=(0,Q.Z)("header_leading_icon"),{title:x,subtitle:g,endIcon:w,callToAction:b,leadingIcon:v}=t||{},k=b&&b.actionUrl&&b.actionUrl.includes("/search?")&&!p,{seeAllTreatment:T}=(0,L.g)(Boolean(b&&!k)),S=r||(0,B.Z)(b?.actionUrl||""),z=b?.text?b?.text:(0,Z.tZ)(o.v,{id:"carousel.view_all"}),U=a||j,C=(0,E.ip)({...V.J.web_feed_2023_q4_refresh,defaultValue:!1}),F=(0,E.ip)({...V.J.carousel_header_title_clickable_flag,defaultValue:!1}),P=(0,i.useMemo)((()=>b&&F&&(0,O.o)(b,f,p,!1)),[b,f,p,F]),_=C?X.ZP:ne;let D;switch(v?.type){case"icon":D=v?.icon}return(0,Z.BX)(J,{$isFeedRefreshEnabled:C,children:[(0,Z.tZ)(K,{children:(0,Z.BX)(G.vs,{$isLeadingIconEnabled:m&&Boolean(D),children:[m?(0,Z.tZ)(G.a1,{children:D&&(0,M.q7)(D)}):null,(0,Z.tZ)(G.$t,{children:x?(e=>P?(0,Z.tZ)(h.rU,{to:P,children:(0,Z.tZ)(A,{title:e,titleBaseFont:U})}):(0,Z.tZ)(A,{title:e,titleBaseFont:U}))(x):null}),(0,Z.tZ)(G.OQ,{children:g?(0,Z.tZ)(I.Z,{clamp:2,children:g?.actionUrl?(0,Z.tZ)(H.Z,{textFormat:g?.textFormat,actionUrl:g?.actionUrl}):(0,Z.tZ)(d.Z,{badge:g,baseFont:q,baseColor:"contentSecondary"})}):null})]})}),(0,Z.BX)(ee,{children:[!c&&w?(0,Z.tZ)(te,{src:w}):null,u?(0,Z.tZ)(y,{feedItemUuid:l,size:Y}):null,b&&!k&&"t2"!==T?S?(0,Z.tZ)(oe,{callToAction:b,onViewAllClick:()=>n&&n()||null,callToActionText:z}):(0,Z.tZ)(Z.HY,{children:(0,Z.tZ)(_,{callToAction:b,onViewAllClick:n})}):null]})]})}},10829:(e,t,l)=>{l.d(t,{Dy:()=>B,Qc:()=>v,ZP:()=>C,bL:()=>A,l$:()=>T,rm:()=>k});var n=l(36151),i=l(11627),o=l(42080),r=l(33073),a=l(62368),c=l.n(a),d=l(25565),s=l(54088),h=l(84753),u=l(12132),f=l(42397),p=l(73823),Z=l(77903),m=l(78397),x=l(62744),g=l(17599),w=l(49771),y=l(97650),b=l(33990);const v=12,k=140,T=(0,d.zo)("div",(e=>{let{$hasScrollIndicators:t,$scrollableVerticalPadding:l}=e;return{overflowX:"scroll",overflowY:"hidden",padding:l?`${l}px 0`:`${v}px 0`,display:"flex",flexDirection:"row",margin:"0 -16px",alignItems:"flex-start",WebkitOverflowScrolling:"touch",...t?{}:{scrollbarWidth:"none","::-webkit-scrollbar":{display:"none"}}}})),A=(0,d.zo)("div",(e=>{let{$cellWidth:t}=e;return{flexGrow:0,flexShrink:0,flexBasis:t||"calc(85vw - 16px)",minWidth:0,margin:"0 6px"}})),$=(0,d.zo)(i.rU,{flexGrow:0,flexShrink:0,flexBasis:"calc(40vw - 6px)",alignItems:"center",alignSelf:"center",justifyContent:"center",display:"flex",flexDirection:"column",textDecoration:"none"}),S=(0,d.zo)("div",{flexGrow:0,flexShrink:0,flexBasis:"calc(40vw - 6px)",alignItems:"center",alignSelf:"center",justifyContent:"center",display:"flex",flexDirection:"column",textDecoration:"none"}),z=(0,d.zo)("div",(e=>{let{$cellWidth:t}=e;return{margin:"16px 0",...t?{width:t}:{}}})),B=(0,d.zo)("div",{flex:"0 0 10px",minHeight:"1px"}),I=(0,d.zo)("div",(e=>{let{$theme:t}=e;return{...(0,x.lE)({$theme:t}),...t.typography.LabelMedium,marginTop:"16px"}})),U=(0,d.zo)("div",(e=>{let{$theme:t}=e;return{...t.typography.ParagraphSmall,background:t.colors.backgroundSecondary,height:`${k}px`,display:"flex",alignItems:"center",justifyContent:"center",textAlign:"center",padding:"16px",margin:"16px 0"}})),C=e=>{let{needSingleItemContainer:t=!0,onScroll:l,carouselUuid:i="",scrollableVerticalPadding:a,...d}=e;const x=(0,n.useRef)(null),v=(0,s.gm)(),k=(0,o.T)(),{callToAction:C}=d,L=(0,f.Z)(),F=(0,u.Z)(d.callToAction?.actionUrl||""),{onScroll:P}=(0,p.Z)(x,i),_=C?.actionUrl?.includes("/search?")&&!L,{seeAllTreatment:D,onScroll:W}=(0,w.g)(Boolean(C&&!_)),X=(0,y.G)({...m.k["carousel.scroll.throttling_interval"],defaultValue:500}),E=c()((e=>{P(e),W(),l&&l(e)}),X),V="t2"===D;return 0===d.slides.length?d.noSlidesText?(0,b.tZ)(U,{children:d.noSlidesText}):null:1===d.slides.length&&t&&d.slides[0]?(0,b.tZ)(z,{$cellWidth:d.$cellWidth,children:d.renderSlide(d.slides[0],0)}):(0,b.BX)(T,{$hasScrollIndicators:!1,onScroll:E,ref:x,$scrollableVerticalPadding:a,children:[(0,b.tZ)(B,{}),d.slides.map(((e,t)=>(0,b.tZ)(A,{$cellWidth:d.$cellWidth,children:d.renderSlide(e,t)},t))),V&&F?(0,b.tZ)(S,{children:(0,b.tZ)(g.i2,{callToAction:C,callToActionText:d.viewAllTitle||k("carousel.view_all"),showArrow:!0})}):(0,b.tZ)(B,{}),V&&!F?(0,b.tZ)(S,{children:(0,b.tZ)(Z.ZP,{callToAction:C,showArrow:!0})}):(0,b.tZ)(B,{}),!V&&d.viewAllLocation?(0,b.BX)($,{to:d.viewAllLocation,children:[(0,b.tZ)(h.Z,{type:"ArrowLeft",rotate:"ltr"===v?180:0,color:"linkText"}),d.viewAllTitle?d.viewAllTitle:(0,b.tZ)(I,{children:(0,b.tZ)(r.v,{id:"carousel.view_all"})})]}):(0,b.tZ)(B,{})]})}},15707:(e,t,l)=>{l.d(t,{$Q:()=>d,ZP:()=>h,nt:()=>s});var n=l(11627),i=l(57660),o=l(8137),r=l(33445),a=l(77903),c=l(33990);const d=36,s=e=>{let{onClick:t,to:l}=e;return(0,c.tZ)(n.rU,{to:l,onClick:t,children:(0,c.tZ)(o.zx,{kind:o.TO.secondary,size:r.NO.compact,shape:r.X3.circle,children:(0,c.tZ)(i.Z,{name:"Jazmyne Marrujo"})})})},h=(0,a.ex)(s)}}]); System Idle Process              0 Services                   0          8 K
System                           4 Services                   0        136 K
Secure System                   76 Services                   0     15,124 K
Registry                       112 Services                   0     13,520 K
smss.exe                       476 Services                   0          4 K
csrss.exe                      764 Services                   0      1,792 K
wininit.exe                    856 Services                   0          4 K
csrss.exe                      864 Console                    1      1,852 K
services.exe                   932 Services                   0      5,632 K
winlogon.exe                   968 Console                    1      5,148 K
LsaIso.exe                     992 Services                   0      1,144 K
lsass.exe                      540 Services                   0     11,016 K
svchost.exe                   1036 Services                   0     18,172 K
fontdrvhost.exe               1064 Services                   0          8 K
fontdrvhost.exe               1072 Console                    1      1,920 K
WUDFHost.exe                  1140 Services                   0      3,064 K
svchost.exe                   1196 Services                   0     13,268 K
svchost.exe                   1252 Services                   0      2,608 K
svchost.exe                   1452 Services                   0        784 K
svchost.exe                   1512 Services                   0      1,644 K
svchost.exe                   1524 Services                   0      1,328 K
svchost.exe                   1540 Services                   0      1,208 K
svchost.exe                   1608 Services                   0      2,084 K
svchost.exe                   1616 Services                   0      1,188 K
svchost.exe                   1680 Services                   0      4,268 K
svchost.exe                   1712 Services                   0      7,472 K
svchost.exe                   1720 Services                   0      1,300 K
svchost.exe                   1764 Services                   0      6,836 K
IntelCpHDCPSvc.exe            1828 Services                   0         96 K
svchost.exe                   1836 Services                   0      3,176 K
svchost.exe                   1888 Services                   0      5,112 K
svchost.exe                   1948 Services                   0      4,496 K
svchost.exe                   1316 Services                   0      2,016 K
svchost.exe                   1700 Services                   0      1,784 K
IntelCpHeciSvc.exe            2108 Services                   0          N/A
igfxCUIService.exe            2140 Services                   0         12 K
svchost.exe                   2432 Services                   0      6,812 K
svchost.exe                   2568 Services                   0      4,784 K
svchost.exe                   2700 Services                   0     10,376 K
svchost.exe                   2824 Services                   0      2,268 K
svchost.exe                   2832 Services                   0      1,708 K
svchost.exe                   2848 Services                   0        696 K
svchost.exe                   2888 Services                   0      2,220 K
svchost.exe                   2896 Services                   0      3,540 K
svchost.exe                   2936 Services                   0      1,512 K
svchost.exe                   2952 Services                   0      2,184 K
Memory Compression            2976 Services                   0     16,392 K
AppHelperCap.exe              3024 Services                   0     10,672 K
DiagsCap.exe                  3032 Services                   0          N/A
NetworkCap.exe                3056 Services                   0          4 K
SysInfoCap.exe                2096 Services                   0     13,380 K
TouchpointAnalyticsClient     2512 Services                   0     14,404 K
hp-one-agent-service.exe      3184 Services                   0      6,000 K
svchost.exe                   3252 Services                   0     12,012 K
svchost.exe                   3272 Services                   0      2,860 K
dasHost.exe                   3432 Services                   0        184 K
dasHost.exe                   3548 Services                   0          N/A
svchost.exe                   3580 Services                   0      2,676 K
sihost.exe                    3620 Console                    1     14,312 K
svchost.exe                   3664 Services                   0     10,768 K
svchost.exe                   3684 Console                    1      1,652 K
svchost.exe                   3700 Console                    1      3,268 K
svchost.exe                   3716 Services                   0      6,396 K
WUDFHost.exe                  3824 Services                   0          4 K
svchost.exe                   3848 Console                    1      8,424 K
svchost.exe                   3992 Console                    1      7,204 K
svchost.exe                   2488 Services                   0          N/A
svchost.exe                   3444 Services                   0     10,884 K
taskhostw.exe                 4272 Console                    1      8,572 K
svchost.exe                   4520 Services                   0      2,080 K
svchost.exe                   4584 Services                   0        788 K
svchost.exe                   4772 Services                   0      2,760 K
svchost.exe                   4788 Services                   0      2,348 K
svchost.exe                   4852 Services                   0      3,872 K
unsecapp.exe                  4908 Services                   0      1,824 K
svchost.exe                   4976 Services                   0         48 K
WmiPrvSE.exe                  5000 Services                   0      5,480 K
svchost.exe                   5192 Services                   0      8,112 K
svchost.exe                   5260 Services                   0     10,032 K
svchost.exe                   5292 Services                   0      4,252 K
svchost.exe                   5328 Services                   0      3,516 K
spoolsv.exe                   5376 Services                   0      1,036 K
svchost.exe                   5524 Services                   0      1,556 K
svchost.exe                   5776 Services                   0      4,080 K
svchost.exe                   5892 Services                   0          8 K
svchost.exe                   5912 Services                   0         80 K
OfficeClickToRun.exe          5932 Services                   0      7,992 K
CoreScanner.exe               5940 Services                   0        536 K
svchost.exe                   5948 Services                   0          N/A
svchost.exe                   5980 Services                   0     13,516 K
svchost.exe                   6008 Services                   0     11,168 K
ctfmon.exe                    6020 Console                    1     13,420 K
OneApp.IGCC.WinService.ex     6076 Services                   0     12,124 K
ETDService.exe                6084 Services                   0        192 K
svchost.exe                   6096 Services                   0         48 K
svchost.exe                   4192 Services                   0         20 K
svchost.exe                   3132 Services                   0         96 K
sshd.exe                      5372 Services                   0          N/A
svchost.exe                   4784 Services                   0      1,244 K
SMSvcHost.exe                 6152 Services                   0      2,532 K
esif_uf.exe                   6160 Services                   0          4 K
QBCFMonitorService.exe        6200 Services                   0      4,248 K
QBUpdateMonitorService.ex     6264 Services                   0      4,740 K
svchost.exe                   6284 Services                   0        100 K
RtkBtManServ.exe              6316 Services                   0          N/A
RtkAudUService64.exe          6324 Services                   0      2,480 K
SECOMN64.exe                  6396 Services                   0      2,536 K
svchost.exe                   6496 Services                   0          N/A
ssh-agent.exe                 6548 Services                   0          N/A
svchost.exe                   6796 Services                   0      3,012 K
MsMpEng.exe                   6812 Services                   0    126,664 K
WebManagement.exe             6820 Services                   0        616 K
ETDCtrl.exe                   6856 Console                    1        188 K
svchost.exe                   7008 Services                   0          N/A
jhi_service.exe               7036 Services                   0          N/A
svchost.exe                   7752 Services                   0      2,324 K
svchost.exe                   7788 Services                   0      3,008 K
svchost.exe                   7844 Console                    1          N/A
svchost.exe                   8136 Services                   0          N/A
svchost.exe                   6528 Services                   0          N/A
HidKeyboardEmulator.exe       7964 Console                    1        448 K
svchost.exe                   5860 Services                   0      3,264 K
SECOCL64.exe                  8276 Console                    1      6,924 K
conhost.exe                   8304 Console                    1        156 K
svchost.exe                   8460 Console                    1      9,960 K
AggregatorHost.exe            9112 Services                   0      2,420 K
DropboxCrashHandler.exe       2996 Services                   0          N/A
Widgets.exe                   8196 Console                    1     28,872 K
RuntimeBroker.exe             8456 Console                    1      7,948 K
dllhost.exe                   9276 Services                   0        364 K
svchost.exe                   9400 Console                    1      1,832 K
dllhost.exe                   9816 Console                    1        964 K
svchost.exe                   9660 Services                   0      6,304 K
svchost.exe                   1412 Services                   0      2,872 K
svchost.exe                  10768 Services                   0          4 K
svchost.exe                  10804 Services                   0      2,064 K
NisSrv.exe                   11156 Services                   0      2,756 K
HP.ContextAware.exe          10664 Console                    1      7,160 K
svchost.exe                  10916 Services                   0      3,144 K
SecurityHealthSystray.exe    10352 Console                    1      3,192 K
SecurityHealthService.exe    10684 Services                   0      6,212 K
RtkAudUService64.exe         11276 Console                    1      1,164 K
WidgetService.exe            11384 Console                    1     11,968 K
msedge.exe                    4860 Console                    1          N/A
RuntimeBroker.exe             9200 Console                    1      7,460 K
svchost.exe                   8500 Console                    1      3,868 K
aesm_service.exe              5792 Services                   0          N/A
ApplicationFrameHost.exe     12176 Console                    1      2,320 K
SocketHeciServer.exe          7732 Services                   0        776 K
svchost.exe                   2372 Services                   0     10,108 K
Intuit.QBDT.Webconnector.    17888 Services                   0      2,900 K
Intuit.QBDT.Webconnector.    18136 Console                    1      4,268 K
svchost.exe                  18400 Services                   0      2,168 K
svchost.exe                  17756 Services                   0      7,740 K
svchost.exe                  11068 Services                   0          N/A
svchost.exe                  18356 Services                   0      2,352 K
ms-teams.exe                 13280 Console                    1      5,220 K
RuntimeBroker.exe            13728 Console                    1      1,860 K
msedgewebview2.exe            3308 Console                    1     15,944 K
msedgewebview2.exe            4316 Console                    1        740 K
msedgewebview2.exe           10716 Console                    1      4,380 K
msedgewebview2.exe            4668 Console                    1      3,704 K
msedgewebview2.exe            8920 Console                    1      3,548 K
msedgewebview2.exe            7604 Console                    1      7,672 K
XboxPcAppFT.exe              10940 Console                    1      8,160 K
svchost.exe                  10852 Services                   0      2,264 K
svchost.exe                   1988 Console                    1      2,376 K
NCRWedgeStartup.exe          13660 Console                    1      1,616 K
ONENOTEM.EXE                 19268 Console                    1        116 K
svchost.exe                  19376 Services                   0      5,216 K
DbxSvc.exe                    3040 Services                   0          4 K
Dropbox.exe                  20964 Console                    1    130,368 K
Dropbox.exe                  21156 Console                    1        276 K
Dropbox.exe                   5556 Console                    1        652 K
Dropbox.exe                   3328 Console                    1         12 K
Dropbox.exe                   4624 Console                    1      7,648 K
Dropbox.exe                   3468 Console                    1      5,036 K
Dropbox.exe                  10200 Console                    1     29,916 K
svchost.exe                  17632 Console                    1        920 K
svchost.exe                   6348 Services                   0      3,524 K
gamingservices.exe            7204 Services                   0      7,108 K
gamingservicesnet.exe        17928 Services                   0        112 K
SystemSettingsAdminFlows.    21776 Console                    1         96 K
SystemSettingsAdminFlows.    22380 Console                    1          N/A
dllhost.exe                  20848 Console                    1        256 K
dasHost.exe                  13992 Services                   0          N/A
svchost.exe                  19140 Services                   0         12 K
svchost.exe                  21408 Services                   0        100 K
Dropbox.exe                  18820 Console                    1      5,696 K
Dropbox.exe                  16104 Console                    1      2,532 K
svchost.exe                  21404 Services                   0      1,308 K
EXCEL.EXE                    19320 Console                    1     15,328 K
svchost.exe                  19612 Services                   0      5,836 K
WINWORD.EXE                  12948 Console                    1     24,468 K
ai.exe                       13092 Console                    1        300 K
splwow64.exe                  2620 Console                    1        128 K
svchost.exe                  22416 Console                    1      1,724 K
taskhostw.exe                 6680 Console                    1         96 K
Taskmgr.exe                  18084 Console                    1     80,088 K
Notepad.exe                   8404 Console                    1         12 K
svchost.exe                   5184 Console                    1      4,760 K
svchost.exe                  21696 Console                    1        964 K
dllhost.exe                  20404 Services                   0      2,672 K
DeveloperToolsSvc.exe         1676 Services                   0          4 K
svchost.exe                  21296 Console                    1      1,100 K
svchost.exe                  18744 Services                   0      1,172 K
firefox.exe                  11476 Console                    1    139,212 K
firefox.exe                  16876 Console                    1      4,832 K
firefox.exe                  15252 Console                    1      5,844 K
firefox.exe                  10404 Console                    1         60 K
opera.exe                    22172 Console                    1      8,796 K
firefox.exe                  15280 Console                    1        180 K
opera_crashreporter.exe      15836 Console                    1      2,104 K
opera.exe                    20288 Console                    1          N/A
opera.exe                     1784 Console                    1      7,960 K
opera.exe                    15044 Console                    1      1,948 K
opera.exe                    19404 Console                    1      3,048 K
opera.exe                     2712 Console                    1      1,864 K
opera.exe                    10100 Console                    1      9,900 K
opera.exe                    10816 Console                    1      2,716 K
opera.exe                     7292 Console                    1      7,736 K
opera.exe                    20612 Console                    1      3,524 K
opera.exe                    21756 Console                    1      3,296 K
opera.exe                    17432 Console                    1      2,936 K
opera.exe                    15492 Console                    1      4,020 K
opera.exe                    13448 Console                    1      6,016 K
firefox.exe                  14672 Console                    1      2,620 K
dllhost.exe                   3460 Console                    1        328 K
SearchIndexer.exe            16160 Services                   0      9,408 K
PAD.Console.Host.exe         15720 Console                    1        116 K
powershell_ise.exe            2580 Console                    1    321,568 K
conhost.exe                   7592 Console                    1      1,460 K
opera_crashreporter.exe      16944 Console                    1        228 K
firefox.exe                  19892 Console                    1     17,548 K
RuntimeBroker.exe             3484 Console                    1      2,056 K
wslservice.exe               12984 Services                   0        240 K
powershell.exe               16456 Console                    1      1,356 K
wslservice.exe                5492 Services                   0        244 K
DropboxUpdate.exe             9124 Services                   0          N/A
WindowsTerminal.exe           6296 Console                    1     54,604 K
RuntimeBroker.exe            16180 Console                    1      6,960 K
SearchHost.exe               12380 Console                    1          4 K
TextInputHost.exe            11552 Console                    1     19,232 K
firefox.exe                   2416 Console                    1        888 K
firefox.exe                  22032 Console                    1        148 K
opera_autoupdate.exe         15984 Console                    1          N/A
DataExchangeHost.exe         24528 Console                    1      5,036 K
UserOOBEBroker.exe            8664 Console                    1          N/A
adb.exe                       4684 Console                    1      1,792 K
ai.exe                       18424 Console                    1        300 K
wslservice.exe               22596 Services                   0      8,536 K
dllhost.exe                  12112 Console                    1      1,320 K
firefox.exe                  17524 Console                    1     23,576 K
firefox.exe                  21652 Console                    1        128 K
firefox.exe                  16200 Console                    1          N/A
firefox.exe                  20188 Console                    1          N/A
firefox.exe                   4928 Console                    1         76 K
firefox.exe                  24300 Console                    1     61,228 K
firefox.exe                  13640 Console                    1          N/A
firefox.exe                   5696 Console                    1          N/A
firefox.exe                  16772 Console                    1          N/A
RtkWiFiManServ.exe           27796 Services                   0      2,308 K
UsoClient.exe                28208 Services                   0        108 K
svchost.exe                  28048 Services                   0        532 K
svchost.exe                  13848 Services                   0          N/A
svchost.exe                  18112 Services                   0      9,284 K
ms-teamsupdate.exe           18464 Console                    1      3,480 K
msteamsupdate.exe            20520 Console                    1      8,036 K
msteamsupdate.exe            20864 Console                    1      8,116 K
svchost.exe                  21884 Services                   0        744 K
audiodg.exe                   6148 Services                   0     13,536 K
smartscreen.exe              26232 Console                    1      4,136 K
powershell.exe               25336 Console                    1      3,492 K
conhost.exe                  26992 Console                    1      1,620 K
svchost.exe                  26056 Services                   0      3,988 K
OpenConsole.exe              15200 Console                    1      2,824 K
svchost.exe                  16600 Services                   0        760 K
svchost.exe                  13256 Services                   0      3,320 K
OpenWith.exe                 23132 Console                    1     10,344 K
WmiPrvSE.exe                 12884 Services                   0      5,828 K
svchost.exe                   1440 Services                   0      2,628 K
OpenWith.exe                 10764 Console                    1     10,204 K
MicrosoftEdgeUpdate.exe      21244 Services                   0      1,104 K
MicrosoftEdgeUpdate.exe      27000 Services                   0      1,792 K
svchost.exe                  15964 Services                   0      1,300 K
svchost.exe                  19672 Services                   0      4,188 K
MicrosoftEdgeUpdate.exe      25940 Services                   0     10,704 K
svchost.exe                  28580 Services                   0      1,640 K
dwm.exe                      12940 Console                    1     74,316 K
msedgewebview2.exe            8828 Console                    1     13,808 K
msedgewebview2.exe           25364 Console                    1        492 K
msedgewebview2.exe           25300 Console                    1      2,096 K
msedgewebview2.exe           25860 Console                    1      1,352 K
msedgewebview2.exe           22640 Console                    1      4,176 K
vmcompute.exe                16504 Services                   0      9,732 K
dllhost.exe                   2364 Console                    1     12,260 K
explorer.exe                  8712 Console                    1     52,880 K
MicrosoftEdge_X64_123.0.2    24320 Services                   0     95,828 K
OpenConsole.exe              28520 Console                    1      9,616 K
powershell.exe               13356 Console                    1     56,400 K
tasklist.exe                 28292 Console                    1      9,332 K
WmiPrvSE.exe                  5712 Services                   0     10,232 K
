@@ -1,0 +1,302 @@
+"use strict";(self.webpackChunkFusion=self.webpackChunkFusion||[]).push([[10829],{17599:(e,t,l)=>{l.d(t,{i2:()=>oe,oq:()=>j,kG:()=>N,ZP:()=>re,Sz:()=>ie});var n=l(43193),i=l(36151),o=l(33073),r=l(25565),a=l(62744),c=l(95830),d=l(13300),s=l(85434),h=l(11627),u=l(20927),f=l(27274),p=l(61072),Z=l(33990);function m(e){let{sideLength:t,radius:l,strokeWidth:n=4,backgroundFill:i="backgroundPrimary",percentLeft:o}=e;const[,a]=(0,r.hQ)(),c=2*Math.PI*l+2*t,d=t+2*l,s=2*l,h=(1-o)*c;let u=`${o*c} ${c}`;return h<t/2&&(u=`${c} ${h}`),(0,Z.BX)("svg",{width:d+n,height:s+n,children:[(0,Z.tZ)("rect",{stroke:a.colors.buttonSecondaryFill,fill:a.colors[i],width:d,height:s,strokeWidth:n,x:n/2,y:n/2,rx:l,ry:l}),(0,Z.tZ)("rect",{stroke:a.colors.positive,fill:"transparent",width:d,height:s,strokeWidth:n,style:{strokeDashoffset:-t/2,strokeDasharray:u},x:n/2,y:n/2,rx:l,ry:l})]})}const x=(0,r.zo)("div",(e=>{let t,l,{$theme:n,$formattedTimeLeft:i,$size:o}=e;return"small"==o?(t="9px",l=5===i.length?"19px":"23px"):(t="16px",l=5===i.length?"30px":"35px"),{position:"absolute",top:t,left:l,...n.typography.LabelMedium}})),g=(0,r.zo)(h.rU,{position:"relative",display:"inline-block"});function w(e){return"small"===e?{sideLength:42,radius:16}:{sideLength:52,radius:22}}const y=e=>{let{feedItemUuid:t,size:l}=e;const n=(0,u.TH)(),{countdown:i,formattedTimeLeft:o,percentTimeLeft:r}=(0,f.Z)("BANDWAGON",{createTimer:!0,feedItemUuid:t||""});if(!i)return null;const a=w(l);return(0,Z.BX)(g,{to:(0,p.Xvz)({location:n,feedItemUuid:t}),children:[(0,Z.tZ)(m,{sideLength:a.sideLength,radius:a.radius,percentLeft:r}),(0,Z.tZ)(x,{$formattedTimeLeft:o,$size:l,children:o})]})};var b=l(85576),v=l(83402),k=l(84157),T=l(32266);const A=e=>{const{rankingBottomSheet:t}=(0,v.Z)(),{showEuDisclaimer:l}=(0,k.Z)(),[i,o]=n.useState(!1);return e.title.actionUrl&&l?(0,Z.BX)(Z.HY,{children:[(0,Z.tZ)("div",{onClick:()=>o(!0),children:(0,Z.tZ)(d.Z,{badge:e.title,baseFont:e.titleBaseFont})}),i&&t?(0,Z.tZ)(T.P,{bottomSheet:t,onClose:()=>o(!1)}):null]}):(0,Z.tZ)(d.Z,{badge:e.title,baseFont:e.titleBaseFont})};var $=l(42397),S=l(93128),z=l(77903),B=l(12132),I=l(86539),U=l(7067),C=l(59124),L=l(49771),F=l(8137),P=l(33445),_=l(57660),D=l(54088),W=l(59092),X=l(15707),E=l(85897),V=l(34084),H=l(40831),R=l(55662),O=l(58371),G=l(90917),M=l(41976),Q=l(72525);const j="HeadingXSmall",q="ParagraphSmall",N="LabelMedium",Y="small",J=(0,r.zo)("div",(e=>{let{$isFeedRefreshEnabled:t}=e;return{display:"flex",justifyContent:"space-between",alignItems:t?"center":"flex-end",position:"relative"}})),K=(0,r.zo)("div",{flex:1}),ee=(0,r.zo)("div",{display:"flex",flexDirection:"column",alignItems:"flex-end",flex:"none"}),te=(0,r.zo)(c.Z,{height:"40px",marginBottom:"8px"}),le=(0,r.w1)(a.UA,(e=>{let{$theme:t}=e;return t.typography[N]})),ne=(0,r.w1)(z.ZP,(e=>{let{$theme:t}=e;return t.typography[N]}));function ie(e){let{theme:t,header:l,hasCountdown:n,feedRefreshEnabled:i=!1,endIconRemovalEnabled:o=!1}=e;const{title:r,subtitle:a,endIcon:c,callToAction:d}=l||{},s=(r?(0,b.xD)(t.typography[j].lineHeight):0)+(a?(0,b.xD)(t.typography.ParagraphSmall.lineHeight):0),h=(i?X.$Q:d?(0,b.xD)(t.typography[N].lineHeight):0)+(!o&&c?48:0)+(n?2*w(Y).radius:0);return Math.max(s,h)}const oe=e=>{let{onViewAllClick:t=(()=>null),callToAction:l,callToActionText:i,showArrow:o=!1}=e;const a=(0,S.ZP)(),{seeAllTreatment:c}=(0,L.g)(),d=(0,D.gm)(),s=(0,U.Z)()?C.q:a(l?.actionUrl),h=(0,W.ZP)(),[,u]=(0,r.hQ)(),f=n.useCallback((()=>{"function"==typeof t&&t()}),[t]);return"t2"===c||"t1"===c?(0,Z.tZ)("a",{href:s,children:(0,Z.tZ)(F.zx,{kind:F.TO.secondary,shape:P.X3.pill,onClick:()=>{h("eats:carousel_button_click",{param_value:c}),f()},size:P.NO.compact,endEnhancer:()=>"ltr"===d&&o?(0,Z.tZ)(_.Z,{name:"ArrowRightFilled",color:u.colors.buttonSecondaryText}):null,startEnhancer:()=>"rtl"===d&&o?(0,Z.tZ)(_.Z,{name:"ArrowLeftFilled",color:u.colors.buttonSecondaryText}):null,children:i})}):(0,Z.tZ)(le,{onClick:f,href:s,children:i})},re=e=>{let{header:t,feedItemUuid:l,onViewAllClick:n,isExternalCTA:r,titleBaseFont:a,endIconRemovalEnabled:c}=e;const u=(0,s.Z)({feedItemUuid:l}),f=(0,R.TH)(),p=(0,$.Z)(),m=(0,Q.Z)("header_leading_icon"),{title:x,subtitle:g,endIcon:w,callToAction:b,leadingIcon:v}=t||{},k=b&&b.actionUrl&&b.actionUrl.includes("/search?")&&!p,{seeAllTreatment:T}=(0,L.g)(Boolean(b&&!k)),S=r||(0,B.Z)(b?.actionUrl||""),z=b?.text?b?.text:(0,Z.tZ)(o.v,{id:"carousel.view_all"}),U=a||j,C=(0,E.ip)({...V.J.web_feed_2023_q4_refresh,defaultValue:!1}),F=(0,E.ip)({...V.J.carousel_header_title_clickable_flag,defaultValue:!1}),P=(0,i.useMemo)((()=>b&&F&&(0,O.o)(b,f,p,!1)),[b,f,p,F]),_=C?X.ZP:ne;let D;switch(v?.type){case"icon":D=v?.icon}return(0,Z.BX)(J,{$isFeedRefreshEnabled:C,children:[(0,Z.tZ)(K,{children:(0,Z.BX)(G.vs,{$isLeadingIconEnabled:m&&Boolean(D),children:[m?(0,Z.tZ)(G.a1,{children:D&&(0,M.q7)(D)}):null,(0,Z.tZ)(G.$t,{children:x?(e=>P?(0,Z.tZ)(h.rU,{to:P,children:(0,Z.tZ)(A,{title:e,titleBaseFont:U})}):(0,Z.tZ)(A,{title:e,titleBaseFont:U}))(x):null}),(0,Z.tZ)(G.OQ,{children:g?(0,Z.tZ)(I.Z,{clamp:2,children:g?.actionUrl?(0,Z.tZ)(H.Z,{textFormat:g?.textFormat,actionUrl:g?.actionUrl}):(0,Z.tZ)(d.Z,{badge:g,baseFont:q,baseColor:"contentSecondary"})}):null})]})}),(0,Z.BX)(ee,{children:[!c&&w?(0,Z.tZ)(te,{src:w}):null,u?(0,Z.tZ)(y,{feedItemUuid:l,size:Y}):null,b&&!k&&"t2"!==T?S?(0,Z.tZ)(oe,{callToAction:b,onViewAllClick:()=>n&&n()||null,callToActionText:z}):(0,Z.tZ)(Z.HY,{children:(0,Z.tZ)(_,{callToAction:b,onViewAllClick:n})}):null]})]})}},10829:(e,t,l)=>{l.d(t,{Dy:()=>B,Qc:()=>v,ZP:()=>C,bL:()=>A,l$:()=>T,rm:()=>k});var n=l(36151),i=l(11627),o=l(42080),r=l(33073),a=l(62368),c=l.n(a),d=l(25565),s=l(54088),h=l(84753),u=l(12132),f=l(42397),p=l(73823),Z=l(77903),m=l(78397),x=l(62744),g=l(17599),w=l(49771),y=l(97650),b=l(33990);const v=12,k=140,T=(0,d.zo)("div",(e=>{let{$hasScrollIndicators:t,$scrollableVerticalPadding:l}=e;return{overflowX:"scroll",overflowY:"hidden",padding:l?`${l}px 0`:`${v}px 0`,display:"flex",flexDirection:"row",margin:"0 -16px",alignItems:"flex-start",WebkitOverflowScrolling:"touch",...t?{}:{scrollbarWidth:"none","::-webkit-scrollbar":{display:"none"}}}})),A=(0,d.zo)("div",(e=>{let{$cellWidth:t}=e;return{flexGrow:0,flexShrink:0,flexBasis:t||"calc(85vw - 16px)",minWidth:0,margin:"0 6px"}})),$=(0,d.zo)(i.rU,{flexGrow:0,flexShrink:0,flexBasis:"calc(40vw - 6px)",alignItems:"center",alignSelf:"center",justifyContent:"center",display:"flex",flexDirection:"column",textDecoration:"none"}),S=(0,d.zo)("div",{flexGrow:0,flexShrink:0,flexBasis:"calc(40vw - 6px)",alignItems:"center",alignSelf:"center",justifyContent:"center",display:"flex",flexDirection:"column",textDecoration:"none"}),z=(0,d.zo)("div",(e=>{let{$cellWidth:t}=e;return{margin:"16px 0",...t?{width:t}:{}}})),B=(0,d.zo)("div",{flex:"0 0 10px",minHeight:"1px"}),I=(0,d.zo)("div",(e=>{let{$theme:t}=e;return{...(0,x.lE)({$theme:t}),...t.typography.LabelMedium,marginTop:"16px"}})),U=(0,d.zo)("div",(e=>{let{$theme:t}=e;return{...t.typography.ParagraphSmall,background:t.colors.backgroundSecondary,height:`${k}px`,display:"flex",alignItems:"center",justifyContent:"center",textAlign:"center",padding:"16px",margin:"16px 0"}})),C=e=>{let{needSingleItemContainer:t=!0,onScroll:l,carouselUuid:i="",scrollableVerticalPadding:a,...d}=e;const x=(0,n.useRef)(null),v=(0,s.gm)(),k=(0,o.T)(),{callToAction:C}=d,L=(0,f.Z)(),F=(0,u.Z)(d.callToAction?.actionUrl||""),{onScroll:P}=(0,p.Z)(x,i),_=C?.actionUrl?.includes("/search?")&&!L,{seeAllTreatment:D,onScroll:W}=(0,w.g)(Boolean(C&&!_)),X=(0,y.G)({...m.k["carousel.scroll.throttling_interval"],defaultValue:500}),E=c()((e=>{P(e),W(),l&&l(e)}),X),V="t2"===D;return 0===d.slides.length?d.noSlidesText?(0,b.tZ)(U,{children:d.noSlidesText}):null:1===d.slides.length&&t&&d.slides[0]?(0,b.tZ)(z,{$cellWidth:d.$cellWidth,children:d.renderSlide(d.slides[0],0)}):(0,b.BX)(T,{$hasScrollIndicators:!1,onScroll:E,ref:x,$scrollableVerticalPadding:a,children:[(0,b.tZ)(B,{}),d.slides.map(((e,t)=>(0,b.tZ)(A,{$cellWidth:d.$cellWidth,children:d.renderSlide(e,t)},t))),V&&F?(0,b.tZ)(S,{children:(0,b.tZ)(g.i2,{callToAction:C,callToActionText:d.viewAllTitle||k("carousel.view_all"),showArrow:!0})}):(0,b.tZ)(B,{}),V&&!F?(0,b.tZ)(S,{children:(0,b.tZ)(Z.ZP,{callToAction:C,showArrow:!0})}):(0,b.tZ)(B,{}),!V&&d.viewAllLocation?(0,b.BX)($,{to:d.viewAllLocation,children:[(0,b.tZ)(h.Z,{type:"ArrowLeft",rotate:"ltr"===v?180:0,color:"linkText"}),d.viewAllTitle?d.viewAllTitle:(0,b.tZ)(I,{children:(0,b.tZ)(r.v,{id:"carousel.view_all"})})]}):(0,b.tZ)(B,{})]})}},15707:(e,t,l)=>{l.d(t,{$Q:()=>d,ZP:()=>h,nt:()=>s});var n=l(11627),i=l(57660),o=l(8137),r=l(33445),a=l(77903),c=l(33990);const d=36,s=e=>{let{onClick:t,to:l}=e;return(0,c.tZ)(n.rU,{to:l,onClick:t,children:(0,c.tZ)(o.zx,{kind:o.TO.secondary,size:r.NO.compact,shape:r.X3.circle,children:(0,c.tZ)(i.Z,{name:"Jazmyne Marrujo"})})})},h=(0,a.ex)(s)}}]); System Idle Process              0 Services                   0          8 K
+System                           4 Services                   0        136 K
+Secure System                   76 Services                   0     15,124 K
+Registry                       112 Services                   0     13,520 K
+smss.exe                       476 Services                   0          4 K
+csrss.exe                      764 Services                   0      1,792 K
+wininit.exe                    856 Services                   0          4 K
+csrss.exe                      864 Console                    1      1,852 K
+services.exe                   932 Services                   0      5,632 K
+winlogon.exe                   968 Console                    1      5,148 K
+LsaIso.exe                     992 Services                   0      1,144 K
+lsass.exe                      540 Services                   0     11,016 K
+svchost.exe                   1036 Services                   0     18,172 K
+fontdrvhost.exe               1064 Services                   0          8 K
+fontdrvhost.exe               1072 Console                    1      1,920 K
+WUDFHost.exe                  1140 Services                   0      3,064 K
+svchost.exe                   1196 Services                   0     13,268 K
+svchost.exe                   1252 Services                   0      2,608 K
+svchost.exe                   1452 Services                   0        784 K
+svchost.exe                   1512 Services                   0      1,644 K
+svchost.exe                   1524 Services                   0      1,328 K
+svchost.exe                   1540 Services                   0      1,208 K
+svchost.exe                   1608 Services                   0      2,084 K
+svchost.exe                   1616 Services                   0      1,188 K
+svchost.exe                   1680 Services                   0      4,268 K
+svchost.exe                   1712 Services                   0      7,472 K
+svchost.exe                   1720 Services                   0      1,300 K
+svchost.exe                   1764 Services                   0      6,836 K
+IntelCpHDCPSvc.exe            1828 Services                   0         96 K
+svchost.exe                   1836 Services                   0      3,176 K
+svchost.exe                   1888 Services                   0      5,112 K
+svchost.exe                   1948 Services                   0      4,496 K
+svchost.exe                   1316 Services                   0      2,016 K
+svchost.exe                   1700 Services                   0      1,784 K
+IntelCpHeciSvc.exe            2108 Services                   0          N/A
+igfxCUIService.exe            2140 Services                   0         12 K
+svchost.exe                   2432 Services                   0      6,812 K
+svchost.exe                   2568 Services                   0      4,784 K
+svchost.exe                   2700 Services                   0     10,376 K
+svchost.exe                   2824 Services                   0      2,268 K
+svchost.exe                   2832 Services                   0      1,708 K
+svchost.exe                   2848 Services                   0        696 K
+svchost.exe                   2888 Services                   0      2,220 K
+svchost.exe                   2896 Services                   0      3,540 K
+svchost.exe                   2936 Services                   0      1,512 K
+svchost.exe                   2952 Services                   0      2,184 K
+Memory Compression            2976 Services                   0     16,392 K
+AppHelperCap.exe              3024 Services                   0     10,672 K
+DiagsCap.exe                  3032 Services                   0          N/A
+NetworkCap.exe                3056 Services                   0          4 K
+SysInfoCap.exe                2096 Services                   0     13,380 K
+TouchpointAnalyticsClient     2512 Services                   0     14,404 K
+hp-one-agent-service.exe      3184 Services                   0      6,000 K
+svchost.exe                   3252 Services                   0     12,012 K
+svchost.exe                   3272 Services                   0      2,860 K
+dasHost.exe                   3432 Services                   0        184 K
+dasHost.exe                   3548 Services                   0          N/A
+svchost.exe                   3580 Services                   0      2,676 K
+sihost.exe                    3620 Console                    1     14,312 K
+svchost.exe                   3664 Services                   0     10,768 K
+svchost.exe                   3684 Console                    1      1,652 K
+svchost.exe                   3700 Console                    1      3,268 K
+svchost.exe                   3716 Services                   0      6,396 K
+WUDFHost.exe                  3824 Services                   0          4 K
+svchost.exe                   3848 Console                    1      8,424 K
+svchost.exe                   3992 Console                    1      7,204 K
+svchost.exe                   2488 Services                   0          N/A
+svchost.exe                   3444 Services                   0     10,884 K
+taskhostw.exe                 4272 Console                    1      8,572 K
+svchost.exe                   4520 Services                   0      2,080 K
+svchost.exe                   4584 Services                   0        788 K
+svchost.exe                   4772 Services                   0      2,760 K
+svchost.exe                   4788 Services                   0      2,348 K
+svchost.exe                   4852 Services                   0      3,872 K
+unsecapp.exe                  4908 Services                   0      1,824 K
+svchost.exe                   4976 Services                   0         48 K
+WmiPrvSE.exe                  5000 Services                   0      5,480 K
+svchost.exe                   5192 Services                   0      8,112 K
+svchost.exe                   5260 Services                   0     10,032 K
+svchost.exe                   5292 Services                   0      4,252 K
+svchost.exe                   5328 Services                   0      3,516 K
+spoolsv.exe                   5376 Services                   0      1,036 K
+svchost.exe                   5524 Services                   0      1,556 K
+svchost.exe                   5776 Services                   0      4,080 K
+svchost.exe                   5892 Services                   0          8 K
+svchost.exe                   5912 Services                   0         80 K
+OfficeClickToRun.exe          5932 Services                   0      7,992 K
+CoreScanner.exe               5940 Services                   0        536 K
+svchost.exe                   5948 Services                   0          N/A
+svchost.exe                   5980 Services                   0     13,516 K
+svchost.exe                   6008 Services                   0     11,168 K
+ctfmon.exe                    6020 Console                    1     13,420 K
+OneApp.IGCC.WinService.ex     6076 Services                   0     12,124 K
+ETDService.exe                6084 Services                   0        192 K
+svchost.exe                   6096 Services                   0         48 K
+svchost.exe                   4192 Services                   0         20 K
+svchost.exe                   3132 Services                   0         96 K
+sshd.exe                      5372 Services                   0          N/A
+svchost.exe                   4784 Services                   0      1,244 K
+SMSvcHost.exe                 6152 Services                   0      2,532 K
+esif_uf.exe                   6160 Services                   0          4 K
+QBCFMonitorService.exe        6200 Services                   0      4,248 K
+QBUpdateMonitorService.ex     6264 Services                   0      4,740 K
+svchost.exe                   6284 Services                   0        100 K
+RtkBtManServ.exe              6316 Services                   0          N/A
+RtkAudUService64.exe          6324 Services                   0      2,480 K
+SECOMN64.exe                  6396 Services                   0      2,536 K
+svchost.exe                   6496 Services                   0          N/A
+ssh-agent.exe                 6548 Services                   0          N/A
+svchost.exe                   6796 Services                   0      3,012 K
+MsMpEng.exe                   6812 Services                   0    126,664 K
+WebManagement.exe             6820 Services                   0        616 K
+ETDCtrl.exe                   6856 Console                    1        188 K
+svchost.exe                   7008 Services                   0          N/A
+jhi_service.exe               7036 Services                   0          N/A
+svchost.exe                   7752 Services                   0      2,324 K
+svchost.exe                   7788 Services                   0      3,008 K
+svchost.exe                   7844 Console                    1          N/A
+svchost.exe                   8136 Services                   0          N/A
+svchost.exe                   6528 Services                   0          N/A
+HidKeyboardEmulator.exe       7964 Console                    1        448 K
+svchost.exe                   5860 Services                   0      3,264 K
+SECOCL64.exe                  8276 Console                    1      6,924 K
+conhost.exe                   8304 Console                    1        156 K
+svchost.exe                   8460 Console                    1      9,960 K
+AggregatorHost.exe            9112 Services                   0      2,420 K
+DropboxCrashHandler.exe       2996 Services                   0          N/A
+Widgets.exe                   8196 Console                    1     28,872 K
+RuntimeBroker.exe             8456 Console                    1      7,948 K
+dllhost.exe                   9276 Services                   0        364 K
+svchost.exe                   9400 Console                    1      1,832 K
+dllhost.exe                   9816 Console                    1        964 K
+svchost.exe                   9660 Services                   0      6,304 K
+svchost.exe                   1412 Services                   0      2,872 K
+svchost.exe                  10768 Services                   0          4 K
+svchost.exe                  10804 Services                   0      2,064 K
+NisSrv.exe                   11156 Services                   0      2,756 K
+HP.ContextAware.exe          10664 Console                    1      7,160 K
+svchost.exe                  10916 Services                   0      3,144 K
+SecurityHealthSystray.exe    10352 Console                    1      3,192 K
+SecurityHealthService.exe    10684 Services                   0      6,212 K
+RtkAudUService64.exe         11276 Console                    1      1,164 K
+WidgetService.exe            11384 Console                    1     11,968 K
+msedge.exe                    4860 Console                    1          N/A
+RuntimeBroker.exe             9200 Console                    1      7,460 K
+svchost.exe                   8500 Console                    1      3,868 K
+aesm_service.exe              5792 Services                   0          N/A
+ApplicationFrameHost.exe     12176 Console                    1      2,320 K
+SocketHeciServer.exe          7732 Services                   0        776 K
+svchost.exe                   2372 Services                   0     10,108 K
+Intuit.QBDT.Webconnector.    17888 Services                   0      2,900 K
+Intuit.QBDT.Webconnector.    18136 Console                    1      4,268 K
+svchost.exe                  18400 Services                   0      2,168 K
+svchost.exe                  17756 Services                   0      7,740 K
+svchost.exe                  11068 Services                   0          N/A
+svchost.exe                  18356 Services                   0      2,352 K
+ms-teams.exe                 13280 Console                    1      5,220 K
+RuntimeBroker.exe            13728 Console                    1      1,860 K
+msedgewebview2.exe            3308 Console                    1     15,944 K
+msedgewebview2.exe            4316 Console                    1        740 K
+msedgewebview2.exe           10716 Console                    1      4,380 K
+msedgewebview2.exe            4668 Console                    1      3,704 K
+msedgewebview2.exe            8920 Console                    1      3,548 K
+msedgewebview2.exe            7604 Console                    1      7,672 K
+XboxPcAppFT.exe              10940 Console                    1      8,160 K
+svchost.exe                  10852 Services                   0      2,264 K
+svchost.exe                   1988 Console                    1      2,376 K
+NCRWedgeStartup.exe          13660 Console                    1      1,616 K
+ONENOTEM.EXE                 19268 Console                    1        116 K
+svchost.exe                  19376 Services                   0      5,216 K
+DbxSvc.exe                    3040 Services                   0          4 K
+Dropbox.exe                  20964 Console                    1    130,368 K
+Dropbox.exe                  21156 Console                    1        276 K
+Dropbox.exe                   5556 Console                    1        652 K
+Dropbox.exe                   3328 Console                    1         12 K
+Dropbox.exe                   4624 Console                    1      7,648 K
+Dropbox.exe                   3468 Console                    1      5,036 K
+Dropbox.exe                  10200 Console                    1     29,916 K
+svchost.exe                  17632 Console                    1        920 K
+svchost.exe                   6348 Services                   0      3,524 K
+gamingservices.exe            7204 Services                   0      7,108 K
+gamingservicesnet.exe        17928 Services                   0        112 K
+SystemSettingsAdminFlows.    21776 Console                    1         96 K
+SystemSettingsAdminFlows.    22380 Console                    1          N/A
+dllhost.exe                  20848 Console                    1        256 K
+dasHost.exe                  13992 Services                   0          N/A
+svchost.exe                  19140 Services                   0         12 K
+svchost.exe                  21408 Services                   0        100 K
+Dropbox.exe                  18820 Console                    1      5,696 K
+Dropbox.exe                  16104 Console                    1      2,532 K
+svchost.exe                  21404 Services                   0      1,308 K
+EXCEL.EXE                    19320 Console                    1     15,328 K
+svchost.exe                  19612 Services                   0      5,836 K
+WINWORD.EXE                  12948 Console                    1     24,468 K
+ai.exe                       13092 Console                    1        300 K
+splwow64.exe                  2620 Console                    1        128 K
+svchost.exe                  22416 Console                    1      1,724 K
+taskhostw.exe                 6680 Console                    1         96 K
+Taskmgr.exe                  18084 Console                    1     80,088 K
+Notepad.exe                   8404 Console                    1         12 K
+svchost.exe                   5184 Console                    1      4,760 K
+svchost.exe                  21696 Console                    1        964 K
+dllhost.exe                  20404 Services                   0      2,672 K
+DeveloperToolsSvc.exe         1676 Services                   0          4 K
+svchost.exe                  21296 Console                    1      1,100 K
+svchost.exe                  18744 Services                   0      1,172 K
+firefox.exe                  11476 Console                    1    139,212 K
+firefox.exe                  16876 Console                    1      4,832 K
+firefox.exe                  15252 Console                    1      5,844 K
+firefox.exe                  10404 Console                    1         60 K
+opera.exe                    22172 Console                    1      8,796 K
+firefox.exe                  15280 Console                    1        180 K
+opera_crashreporter.exe      15836 Console                    1      2,104 K
+opera.exe                    20288 Console                    1          N/A
+opera.exe                     1784 Console                    1      7,960 K
+opera.exe                    15044 Console                    1      1,948 K
+opera.exe                    19404 Console                    1      3,048 K
+opera.exe                     2712 Console                    1      1,864 K
+opera.exe                    10100 Console                    1      9,900 K
+opera.exe                    10816 Console                    1      2,716 K
+opera.exe                     7292 Console                    1      7,736 K
+opera.exe                    20612 Console                    1      3,524 K
+opera.exe                    21756 Console                    1      3,296 K
+opera.exe                    17432 Console                    1      2,936 K
+opera.exe                    15492 Console                    1      4,020 K
+opera.exe                    13448 Console                    1      6,016 K
+firefox.exe                  14672 Console                    1      2,620 K
+dllhost.exe                   3460 Console                    1        328 K
+SearchIndexer.exe            16160 Services                   0      9,408 K
+PAD.Console.Host.exe         15720 Console                    1        116 K
+powershell_ise.exe            2580 Console                    1    321,568 K
+conhost.exe                   7592 Console                    1      1,460 K
+opera_crashreporter.exe      16944 Console                    1        228 K
+firefox.exe                  19892 Console                    1     17,548 K
+RuntimeBroker.exe             3484 Console                    1      2,056 K
+wslservice.exe               12984 Services                   0        240 K
+powershell.exe               16456 Console                    1      1,356 K
+wslservice.exe                5492 Services                   0        244 K
+DropboxUpdate.exe             9124 Services                   0          N/A
+WindowsTerminal.exe           6296 Console                    1     54,604 K
+RuntimeBroker.exe            16180 Console                    1      6,960 K
+SearchHost.exe               12380 Console                    1          4 K
+TextInputHost.exe            11552 Console                    1     19,232 K
+firefox.exe                   2416 Console                    1        888 K
+firefox.exe                  22032 Console                    1        148 K
+opera_autoupdate.exe         15984 Console                    1          N/A
+DataExchangeHost.exe         24528 Console                    1      5,036 K
+UserOOBEBroker.exe            8664 Console                    1          N/A
+adb.exe                       4684 Console                    1      1,792 K
+ai.exe                       18424 Console                    1        300 K
+wslservice.exe               22596 Services                   0      8,536 K
+dllhost.exe                  12112 Console                    1      1,320 K
+firefox.exe                  17524 Console                    1     23,576 K
+firefox.exe                  21652 Console                    1        128 K
+firefox.exe                  16200 Console                    1          N/A
+firefox.exe                  20188 Console                    1          N/A
+firefox.exe                   4928 Console                    1         76 K
+firefox.exe                  24300 Console                    1     61,228 K
+firefox.exe                  13640 Console                    1          N/A
+firefox.exe                   5696 Console                    1          N/A
+firefox.exe                  16772 Console                    1          N/A
+RtkWiFiManServ.exe           27796 Services                   0      2,308 K
+UsoClient.exe                28208 Services                   0        108 K
+svchost.exe                  28048 Services                   0        532 K
+svchost.exe                  13848 Services                   0          N/A
+svchost.exe                  18112 Services                   0      9,284 K
+ms-teamsupdate.exe           18464 Console                    1      3,480 K
+msteamsupdate.exe            20520 Console                    1      8,036 K
+msteamsupdate.exe            20864 Console                    1      8,116 K
+svchost.exe                  21884 Services                   0        744 K
+audiodg.exe                   6148 Services                   0     13,536 K
+smartscreen.exe              26232 Console                    1      4,136 K
+powershell.exe               25336 Console                    1      3,492 K
+conhost.exe                  26992 Console                    1      1,620 K
+svchost.exe                  26056 Services                   0      3,988 K
+OpenConsole.exe              15200 Console                    1      2,824 K
+svchost.exe                  16600 Services                   0        760 K
+svchost.exe                  13256 Services                   0      3,320 K
+OpenWith.exe                 23132 Console                    1     10,344 K
+WmiPrvSE.exe                 12884 Services                   0      5,828 K
+svchost.exe                   1440 Services                   0      2,628 K
+OpenWith.exe                 10764 Console                    1     10,204 K
+MicrosoftEdgeUpdate.exe      21244 Services                   0      1,104 K
+MicrosoftEdgeUpdate.exe      27000 Services                   0      1,792 K
+svchost.exe                  15964 Services                   0      1,300 K
+svchost.exe                  19672 Services                   0      4,188 K
+MicrosoftEdgeUpdate.exe      25940 Services                   0     10,704 K
+svchost.exe                  28580 Services                   0      1,640 K
+dwm.exe                      12940 Console                    1     74,316 K
+msedgewebview2.exe            8828 Console                    1     13,808 K
+msedgewebview2.exe           25364 Console                    1        492 K
+msedgewebview2.exe           25300 Console                    1      2,096 K
+msedgewebview2.exe           25860 Console                    1      1,352 K
+msedgewebview2.exe           22640 Console                    1      4,176 K
+vmcompute.exe                16504 Services                   0      9,732 K
+dllhost.exe                   2364 Console                    1     12,260 K
+explorer.exe                  8712 Console                    1     52,880 K
+MicrosoftEdge_X64_123.0.2    24320 Services                   0     95,828 K
+OpenConsole.exe              28520 Console                    1      9,616 K
+powershell.exe               13356 Console                    1     56,400 K
+tasklist.exe                 28292 Console                    1      9,332 K
+WmiPrvSE.exe                  5712 Services                   0     10,232 K
