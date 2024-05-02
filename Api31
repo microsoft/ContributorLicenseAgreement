@@ -1,0 +1,342 @@
+
+05-01 23:26:08.478|2    |build: 20220728
+05-01 23:26:08.487|2    |API level: 31
+05-01 23:26:08.500|2    |Device: Wingtech ! Celero5G ! Saturn
+05-01 23:26:08.506|2    |Method: initialize sticky true
+05-01 23:26:08.512|2    |Start ABTO Service
+05-01 23:26:08.519|2    |build: 20220728
+05-01 23:26:08.526|2    |API level: 31
+05-01 23:26:08.532|2    |Device: Wingtech ! Celero5G ! Saturn
+05-01 23:26:08.541|2    |Create SIP Service
+05-01 23:26:08.550|2    |Service has been setup ? true
+05-01 23:26:08.556|2    |onCreate finished
+05-01 23:26:08.562|2    |onStartCommand
+05-01 23:26:08.568|2    |onStartCommand intent != null
+05-01 23:26:08.575|2    |flags = 0 , startId = 1, stickyState = 1
+05-01 23:26:08.623|2    |We are valid ANYWAY
+05-01 23:26:08.631|2    |Listen for Device State
+05-01 23:26:08.641|2    |Start monitoring of route file ? 0
+05-01 23:26:08.653|2    |Listen for phone state
+05-01 23:26:08.674|2    |We are valid ANYWAY
+05-01 23:26:08.679|2    |Direct sip start
+05-01 23:26:08.685|2    |ABTOSipService start binding
+05-01 23:26:08.691|2    |Action is org.abtollc.service.ABTOSipService
+05-01 23:26:08.697|2    |Start sip on bind
+05-01 23:26:08.706|2    |Creating new handler thread
+05-01 23:26:08.716|2    |acquire wakelock: holder count=1
+05-01 23:26:08.724|2    |Service returned
+05-01 23:26:08.732|2    |acquire wakelock: holder count=2
+05-01 23:26:08.740|84   |Create Preferences
+05-01 23:26:08.745|2    |service connected
+05-01 23:26:08.753|84   |Cache some prefs
+05-01 23:26:08.763|84   |Start was asked and we should actually start now
+05-01 23:26:08.769|84   |Ask abservice to start itself
+05-01 23:26:08.785|84   |>>sipStart<< created = NO
+05-01 23:26:08.795|84   |We are valid ANYWAY
+05-01 23:26:08.802|84   |Starting sip stack
+05-01 23:26:08.808|2    |Event: Initialize state [1]: [Starting sip stack] notify true
+05-01 23:26:08.813|84   |send event type = 8
+05-01 23:26:08.818|84   |Quit this wrapper
+05-01 23:26:08.842|84   |Created 0
+05-01 23:26:08.848|84   |create receiver....
+05-01 23:26:08.859|84   |Create async worker !!!
+05-01 23:26:08.865|84   |create zrtp receiver
+05-01 23:26:08.872|84   |create notify receiver
+05-01 23:26:08.881|84   |create SIP msg receiver
+05-01 23:26:08.894|84   |Attach is done to callback
+05-01 23:26:08.909|84   |Dir /data/user/0/com.smscodes.app
+05-01 23:26:08.915|84   |Found native lib using clean way
+05-01 23:26:08.925|84   |Dir /data/user/0/com.smscodes.app
+05-01 23:26:08.932|84   |Found native lib using clean way
+05-01 23:26:08.943|84   |Dir /data/user/0/com.smscodes.app
+05-01 23:26:08.959|84   |Found native lib using clean way
+05-01 23:26:08.969|84   |Dir /data/user/0/com.smscodes.app
+05-01 23:26:08.977|84   |Found native lib using clean way
+05-01 23:26:08.982|84   |Dir /data/user/0/com.smscodes.app
+05-01 23:26:08.987|84   |Found native lib using clean way
+05-01 23:26:08.994|84   |Dir /data/user/0/com.smscodes.app
+05-01 23:26:09.002|84   |Found native lib using clean way
+05-01 23:26:09.007|84   |Dir /data/user/0/com.smscodes.app
+05-01 23:26:09.013|84   |Found native lib using clean way
+05-01 23:26:09.020|84   |Dir /data/user/0/com.smscodes.app
+05-01 23:26:09.032|84   |Found native lib using clean way
+05-01 23:26:09.042|84   |init function for codecs: abmedia_codec_g729_init
+05-01 23:26:09.049|84   |init function for codecs: abmedia_codec_g7221_init
+05-01 23:26:09.057|84   |init function for codecs: abmedia_codec_codec2_init
+05-01 23:26:09.064|84   |init function for codecs: abmedia_codec_ffmpeg_aud_init
+05-01 23:26:09.072|84   |init function for codecs: abmedia_codec_opus_init
+05-01 23:26:09.081|84   |Dir /data/user/0/com.smscodes.app
+05-01 23:26:09.091|84   |Found native lib using clean way
+05-01 23:26:09.100|84   |Use OpenSL-ES implementation
+05-01 23:26:09.112|84   |Load video plugin at /data/app/~~aAeVfc9-jxRIdPcIQabzA==/com.smscodes.app-22BoLl4JppUw4H2VZTiFUw==/lib/arm64/libabto_video_android.so
+05-01 23:26:09.128|84   |Check STUN is enabled: no
+05-01 23:26:09.143|84   |sip_endpoint.c  .Module "mod-absua-log" registered
+
+05-01 23:26:09.150|84   |sip_endpoint.c  .Module "mod-tsx-layer" registered
+
+05-01 23:26:09.155|84   |sip_endpoint.c  .Module "mod-stateful-util" registered
+
+05-01 23:26:09.167|84   |sip_endpoint.c  .Module "mod-ua" registered
+
+05-01 23:26:09.173|84   |sip_endpoint.c  .Module "mod-100rel" registered
+
+05-01 23:26:09.179|84   |sip_endpoint.c  .Module "mod-absua" registered
+
+05-01 23:26:09.186|84   |sip_endpoint.c  .Module "mod-invite" registered
+
+05-01 23:26:09.196|84   |webrtc_codec.c  ..List of supported codec.
+
+05-01 23:26:09.203|84   |webrtc_codec.c  ..0 ISAC 103 16000 480 32000
+
+05-01 23:26:09.213|84   |webrtc_codec.c  ..1 ISAC 104 32000 960 56000
+
+05-01 23:26:09.222|84   |webrtc_codec.c  ..6 ILBC 97 8000 240 13300
+
+05-01 23:26:09.234|84   |        silk.c  ..SILK codec version 1.0.9 initialized
+
+05-01 23:26:09.265|84   |     ab_opus.c  ..Init opus
+
+05-01 23:26:09.274|84   |     ab_opus.c  ..Init opus > DONE
+
+05-01 23:26:09.282|84   |     ab_opus.c  ..opus enum codecs
+
+05-01 23:26:09.292|84   |sip_endpoint.c  ..Module "mod-opus-sdp-rewriter" registered
+
+05-01 23:26:09.299|84   |  conference.c  ..Creating conference bridge with 12 ports
+
+05-01 23:26:09.306|84   |  Master/sound  ..Using delay buffer with WSOLA.
+
+05-01 23:26:09.317|84   |   absua_vid.c  ..Initializing video subsystem..
+
+05-01 23:26:09.323|84   |sip_endpoint.c  .Module "mod-evsub" registered
+
+05-01 23:26:09.328|84   |sip_endpoint.c  .Module "mod-presence" registered
+
+05-01 23:26:09.333|84   |       evsub.c  .Event pkg "presence" registered by mod-presence
+
+05-01 23:26:09.338|84   |sip_endpoint.c  .Module "mod-mwi" registered
+
+05-01 23:26:09.347|84   |       evsub.c  .Event pkg "message-summary" registered by mod-mwi
+
+05-01 23:26:09.353|84   |sip_endpoint.c  .Module "mod-refer" registered
+
+05-01 23:26:09.362|84   |       evsub.c  .Event pkg "refer" registered by mod-refer
+
+05-01 23:26:09.371|84   |sip_endpoint.c  .Module "mod-absua-pres" registered
+
+05-01 23:26:09.377|84   |sip_endpoint.c  .Module "mod-absua-im" registered
+
+05-01 23:26:09.386|84   |sip_endpoint.c  .Module "mod-absua-options" registered
+
+05-01 23:26:09.392|84   |  absua_core.c  .1 SIP worker threads created
+
+05-01 23:26:09.397|84   |  absua_core.c  .absua version 2.0.1svn for  initialized
+
+05-01 23:26:09.402|84   |  absua_core.c  .abSUA state changed: CREATED --> INIT
+
+05-01 23:26:09.414|84   |  opensl_dev.c  OpenSL sound library initialized
+
+05-01 23:26:09.423|84   |absua_jni_addo  Loaded audio dev
+
+05-01 23:26:09.431|84   |  opengl_dev.c  OpenGL device initialized
+
+05-01 23:26:09.436|84   |absua_jni_addo  Loaded video render dev
+
+05-01 23:26:09.628|84   | android_dev.c   0: no swap
+
+05-01 23:26:09.791|84   | android_dev.c   1: no swap
+
+05-01 23:26:09.796|84   | android_dev.c  Android video capture initialized with 2 device(s):
+
+05-01 23:26:09.801|84   | android_dev.c   0: Front camera
+
+05-01 23:26:09.807|84   | android_dev.c       supported format = YV12/2560x1440 YV12/1440x2560 YV12/2560x1152 YV12/1152x2560 YV12/2560x1120 YV12/1120x2560 YV12/1920x1440 YV12/1440x1920 YV12/1920x1088 YV12/1088x1920 YV12/1920x1080 YV12/1080x1920 YV12/1920x960 YV12/960x1920 YV12/1640x720 YV12/720x1640 YV12/1600x720 YV12/720x1600 YV12/1560x720 YV12/720x1560 YV12/1520x720 YV12/720x1520 YV12/1440x1440 YV12/1440x1440 YV12/1440x1080 YV12/1080x1440 YV12/1440x720 YV12/720x1440 YV12/1280x960 YV12/960x1280 YV12/1280x720 YV12/720x1280 YV12/1080x1080 YV12/1080x1080 YV12/1080x720 YV12/720x1080 YV12/960x720 YV12/720x960 YV12/720x720 YV12/720x720 YV12/720x480 YV12/480x720 YV12/640x480 YV12/480x640 YV12/352x288 YV12/288x352 YV12/320x240 YV12/240x320 YV12/192x144 YV12/144x192 YV12/192x108 YV12/108x192 YV12/176x144 YV12/144x176 YV12/160x96 YV12/96x160 NV21/2560x1440 NV21/1440x2560 NV21/2560x1152 NV21/1152x2560 NV21/2560x1120 NV21/1120x2560 NV21/1920x1440 NV21/1440x1920 NV21/1920x1088 NV21/1088x1920 NV21/1920x1080 NV21/1080x1920 NV21/1920x960 NV21/960x1920 NV21/1640x720 NV21/720x1640 NV21/1600x720 NV21/720x1600 NV21/1560x720 NV21/720x1560 NV21/1520x720 NV21/720x1520 NV21/1440x1440 NV21/1440x1440 NV21/1440x1080 NV21/1080x1440 NV21/1440x720 NV21/720x1440 NV21/1280x960 NV21/960x1280 NV21/1280x720 NV21/720x1280 NV21/1080x1080 NV21/1080x1080 NV21/1080x720 NV21/720x1080 NV21/960x720 NV21/720x960 NV21/720x720 NV21/720x720 NV21/720x480 NV21/480x720 NV21/640x480 NV21/480x640 NV21/352x288 NV21/288x352 NV21/320x240 NV21/240x320 NV21/192x144 NV21/144x192 NV21/192x108 NV21/108x192 NV21/176x144 NV21/144x176 NV21/160x96 NV21/96x160 I420/2560x1440 I420/1440x2560 I420/2560x1152 I420/1152x2560 I420/2560x1120 I420/1120x2560 I420/1920x1440 I420/1440x1920 I420/1920x1088 I420/1088x1920 I420/1920x1080 I420/1080x1920 I420/1920x960 I420/960x1920 I420/1640x720 I420/720x1640 I420/1600x720 I420/720x1600 I420/1560x720 I420/720x1560 I420/1520x720 I420/720x1520 I420/1440x1440 I420/1440x1440 I420/1440x1080 I420/1080x1440 I420/1440x720 I420/720x1440 I420/1280x960 I420/960x1280 I420/1280x720 I420/720x1280 I420/1080x1080 I420/108
+
+05-01 23:26:09.815|84   | android_dev.c   1: Back camera
+
+05-01 23:26:09.821|84   | android_dev.c       supported format = YV12/2560x1440 YV12/1440x2560 YV12/2560x1152 YV12/1152x2560 YV12/2560x1120 YV12/1120x2560 YV12/1920x1440 YV12/1440x1920 YV12/1920x1088 YV12/1088x1920 YV12/1920x1080 YV12/1080x1920 YV12/1920x960 YV12/960x1920 YV12/1640x720 YV12/720x1640 YV12/1600x720 YV12/720x1600 YV12/1560x720 YV12/720x1560 YV12/1520x720 YV12/720x1520 YV12/1440x1440 YV12/1440x1440 YV12/1440x1080 YV12/1080x1440 YV12/1440x720 YV12/720x1440 YV12/1280x960 YV12/960x1280 YV12/1280x720 YV12/720x1280 YV12/1080x1080 YV12/1080x1080 YV12/1080x720 YV12/720x1080 YV12/960x720 YV12/720x960 YV12/720x720 YV12/720x720 YV12/720x480 YV12/480x720 YV12/640x480 YV12/480x640 YV12/352x288 YV12/288x352 YV12/320x240 YV12/240x320 YV12/192x144 YV12/144x192 YV12/192x108 YV12/108x192 YV12/176x144 YV12/144x176 YV12/160x96 YV12/96x160 NV21/2560x1440 NV21/1440x2560 NV21/2560x1152 NV21/1152x2560 NV21/2560x1120 NV21/1120x2560 NV21/1920x1440 NV21/1440x1920 NV21/1920x1088 NV21/1088x1920 NV21/1920x1080 NV21/1080x1920 NV21/1920x960 NV21/960x1920 NV21/1640x720 NV21/720x1640 NV21/1600x720 NV21/720x1600 NV21/1560x720 NV21/720x1560 NV21/1520x720 NV21/720x1520 NV21/1440x1440 NV21/1440x1440 NV21/1440x1080 NV21/1080x1440 NV21/1440x720 NV21/720x1440 NV21/1280x960 NV21/960x1280 NV21/1280x720 NV21/720x1280 NV21/1080x1080 NV21/1080x1080 NV21/1080x720 NV21/720x1080 NV21/960x720 NV21/720x960 NV21/720x720 NV21/720x720 NV21/720x480 NV21/480x720 NV21/640x480 NV21/480x640 NV21/352x288 NV21/288x352 NV21/320x240 NV21/240x320 NV21/192x144 NV21/144x192 NV21/192x108 NV21/108x192 NV21/176x144 NV21/144x176 NV21/160x96 NV21/96x160 I420/2560x1440 I420/1440x2560 I420/2560x1152 I420/1152x2560 I420/2560x1120 I420/1120x2560 I420/1920x1440 I420/1440x1920 I420/1920x1088 I420/1088x1920 I420/1920x1080 I420/1080x1920 I420/1920x960 I420/960x1920 I420/1640x720 I420/720x1640 I420/1600x720 I420/720x1600 I420/1560x720 I420/720x1560 I420/1520x720 I420/720x1520 I420/1440x1440 I420/1440x1440 I420/1440x1080 I420/1080x1440 I420/1440x720 I420/720x1440 I420/1280x960 I420/960x1280 I420/1280x720 I420/720x1280 I420/1080x1080 I420/108
+
+05-01 23:26:09.826|84   |absua_jni_addo  Loaded video capture dev
+
+05-01 23:26:09.832|84   |null_vid_dev.c  NULL video capture initialized with 1 device(s):
+
+05-01 23:26:09.842|84   |null_vid_dev.c   0: NULL video capturer
+
+05-01 23:26:09.860|84   |null_vid_dev.c       supported format = I420/352x288
+
+05-01 23:26:09.866|84   |absua_jni_addo  Loaded NULL video capture dev
+
+05-01 23:26:09.872|84   |absua_jni_addo  Loaded video converter
+
+05-01 23:26:09.880|84   |      ab_vpx.c  Init vpx codec
+
+05-01 23:26:09.886|84   |      ab_vpx.c  Enum codecs...
+
+05-01 23:26:09.895|84   |ffmpeg_vid_cod  The H263-1998 codec is using base codec (H263)
+
+05-01 23:26:09.905|84   |ffmpeg_vid_cod  Cannot find H261 encoder in ffmpeg library
+
+05-01 23:26:09.913|84   |ffmpeg_vid_cod  Cannot find H261 decoder in ffmpeg library
+
+05-01 23:26:09.919|84   |sip_endpoint.c  Module "mod-custom-notify" registered
+
+05-01 23:26:09.925|2    |Event: Initialize state [3]: [Available port for UDP is not found, will be setting the random port] notify true
+05-01 23:26:09.932|84   |send event type = 8
+05-01 23:26:09.937|84   |Activate qos for this transport
+05-01 23:26:09.950|84   |  absua_core.c  SIP UDP socket reachable at 28.124.180.78:42606
+
+05-01 23:26:09.958|84   |udp0xb4000074e  SIP UDP transport started, published address is 28.124.180.78:42606
+
+05-01 23:26:09.966|84   |   absua_acc.c  Adding account: id=<sip:28.124.180.78:42606>
+
+05-01 23:26:09.973|84   |   absua_acc.c  .Account <sip:28.124.180.78:42606> added with id 0
+
+05-01 23:26:09.979|2    |Event: Initialize state [3]: [Available port for TCP is not found, will be setting the random port] notify true
+05-01 23:26:09.985|84   |send event type = 8
+05-01 23:26:09.995|84   |Activate qos for this transport
+05-01 23:26:10.002|84   |  tcplis:36677  SIP TCP listener ready for incoming connections at 28.124.180.78:36677
+
+05-01 23:26:10.008|84   |   absua_acc.c  Adding account: id=<sip:28.124.180.78:36677;transport=TCP>
+
+05-01 23:26:10.014|84   |   absua_acc.c  .Account <sip:28.124.180.78:36677;transport=TCP> added with id 1
+
+05-01 23:26:10.028|84   |send event type = 8
+05-01 23:26:10.038|2    |Event: Initialize state [3]: [Available port is not found, will be setting the random port] notify true
+05-01 23:26:10.045|84   |Activate qos for this transport
+05-01 23:26:10.053|84   |  tlslis:52201  SIP TLS listener is ready for incoming connections at 28.124.180.78:52201
+
+05-01 23:26:10.061|84   |   absua_acc.c  Adding account: id=<sip:28.124.180.78:52201;transport=TLS>
+
+05-01 23:26:10.072|84   |   absua_acc.c  .Account <sip:28.124.180.78:52201;transport=TLS> added with id 2
+
+05-01 23:26:10.078|84   |  absua_core.c  abSUA state changed: INIT --> STARTING
+
+05-01 23:26:10.085|84   |timer_android.  .ab_timer_heap_schedule 0
+
+05-01 23:26:10.091|84   |timer_android.  .Scheduling timer 1 of 0 in 300000 ms @ 0x7357baf2f0
+
+05-01 23:26:10.098|84   |timer_android.  .DBG SCHEDULE timer 0 with internal ID 1 of heap 0 callback 0x57666944
+
+05-01 23:26:10.105|84   |doSchedule 0/1471869680 in 300000ms
+05-01 23:26:10.114|84   |SCHED add 0 in 300000
+05-01 23:26:10.134|84   |sip_endpoint.c  .Module "mod-unsolicited-mwi" registered
+
+05-01 23:26:10.139|84   |  absua_core.c  .abSUA state changed: STARTING --> RUNNING
+
+05-01 23:26:10.146|84   |css_codecs_uti  codecs_get_id 13 bytes 0xe6a0d6f0 (speex/16000/1)
+
+05-01 23:26:10.151|84   |Added codec speex/16000/1
+05-01 23:26:10.157|84   |css_codecs_uti  codecs_get_id 12 bytes 0xe6a0d758 (speex/8000/1)
+
+05-01 23:26:10.164|84   |Added codec speex/8000/1
+05-01 23:26:10.170|84   |css_codecs_uti  codecs_get_id 13 bytes 0xe6a0d7c0 (speex/32000/1)
+
+05-01 23:26:10.177|84   |Added codec speex/32000/1
+05-01 23:26:10.188|84   |css_codecs_uti  codecs_get_id 10 bytes 0xe6a0d828 (GSM/8000/1)
+
+05-01 23:26:10.196|84   |Added codec GSM/8000/1
+05-01 23:26:10.204|84   |css_codecs_uti  codecs_get_id 11 bytes 0xe6a0d890 (PCMU/8000/1)
+
+05-01 23:26:10.212|84   |Added codec PCMU/8000/1
+05-01 23:26:10.229|84   |css_codecs_uti  codecs_get_id 11 bytes 0xe6a0d8f8 (PCMA/8000/1)
+
+05-01 23:26:10.238|84   |Added codec PCMA/8000/1
+05-01 23:26:10.248|84   |css_codecs_uti  codecs_get_id 12 bytes 0xe6a0d960 (G722/16000/1)
+
+05-01 23:26:10.254|84   |Added codec G722/16000/1
+05-01 23:26:10.259|84   |css_codecs_uti  codecs_get_id 12 bytes 0xe6a0d9c8 (ISAC/16000/1)
+
+05-01 23:26:10.266|84   |Added codec ISAC/16000/1
+05-01 23:26:10.272|84   |css_codecs_uti  codecs_get_id 12 bytes 0xe6a0da30 (ISAC/32000/1)
+
+05-01 23:26:10.279|84   |Added codec ISAC/32000/1
+05-01 23:26:10.285|84   |css_codecs_uti  codecs_get_id 11 bytes 0xe6a0da98 (ILBC/8000/1)
+
+05-01 23:26:10.291|84   |Added codec ILBC/8000/1
+05-01 23:26:10.297|84   |css_codecs_uti  codecs_get_id 11 bytes 0xe6a0db00 (SILK/8000/1)
+
+05-01 23:26:10.305|84   |Added codec SILK/8000/1
+05-01 23:26:10.311|84   |css_codecs_uti  codecs_get_id 12 bytes 0xe6a0db68 (SILK/12000/1)
+
+05-01 23:26:10.316|84   |Added codec SILK/12000/1
+05-01 23:26:10.323|84   |css_codecs_uti  codecs_get_id 12 bytes 0xe6a0dbd0 (SILK/16000/1)
+
+05-01 23:26:10.329|84   |Added codec SILK/16000/1
+05-01 23:26:10.335|84   |css_codecs_uti  codecs_get_id 12 bytes 0xe6a0dc38 (SILK/24000/1)
+
+05-01 23:26:10.341|84   |Added codec SILK/24000/1
+05-01 23:26:10.347|84   |css_codecs_uti  codecs_get_id 11 bytes 0xe6a0dca0 (G729/8000/1)
+
+05-01 23:26:10.356|84   |Added codec G729/8000/1
+05-01 23:26:10.363|84   |css_codecs_uti  codecs_get_id 13 bytes 0xe6a0dd08 (G7221/16000/1)
+
+05-01 23:26:10.368|84   |Added codec G7221/16000/1
+05-01 23:26:10.374|84   |css_codecs_uti  codecs_get_id 13 bytes 0xe6a0dd70 (G7221/16000/1)
+
+05-01 23:26:10.382|84   |Added codec G7221/16000/1
+05-01 23:26:10.388|84   |css_codecs_uti  codecs_get_id 13 bytes 0xe6a0ddd8 (G7221/32000/1)
+
+05-01 23:26:10.394|84   |Added codec G7221/32000/1
+05-01 23:26:10.400|84   |css_codecs_uti  codecs_get_id 13 bytes 0xe6a0de40 (G7221/32000/1)
+
+05-01 23:26:10.406|84   |Added codec G7221/32000/1
+05-01 23:26:10.412|84   |css_codecs_uti  codecs_get_id 13 bytes 0xe6a0dea8 (G7221/32000/1)
+
+05-01 23:26:10.417|84   |Added codec G7221/32000/1
+05-01 23:26:10.422|84   |css_codecs_uti  codecs_get_id 13 bytes 0xe6a0df10 (CODEC2/8000/1)
+
+05-01 23:26:10.429|84   |Added codec CODEC2/8000/1
+05-01 23:26:10.439|84   |css_codecs_uti  codecs_get_id 11 bytes 0xe6a0df78 (G723/8000/1)
+
+05-01 23:26:10.449|84   |Added codec G723/8000/1
+05-01 23:26:10.460|84   |css_codecs_uti  codecs_get_id 12 bytes 0xe6a0dfe0 (opus/16000/1)
+
+05-01 23:26:10.469|84   |Added codec opus/16000/1
+05-01 23:26:10.477|84   |css_codecs_uti  codecs_get_id 12 bytes 0xe6a0e048 (opus/48000/1)
+
+05-01 23:26:10.487|84   |Added codec opus/48000/1
+05-01 23:26:10.497|84   |css_codecs_uti  codecs_vid_get_id 7 bytes 0xe6a0d6f0 (VP8/102)
+
+05-01 23:26:10.507|84   |Added video codec VP8
+05-01 23:26:10.513|84   |css_codecs_uti  codecs_vid_get_id 7 bytes 0xe6a0d758 (H264/97)
+
+05-01 23:26:10.518|84   |Added video codec H264
+05-01 23:26:10.524|84   |css_codecs_uti  codecs_vid_get_id 12 bytes 0xe6a0d7c0 (H263-1998/96)
+
+05-01 23:26:10.530|84   |Added video codec H263-1998
+05-01 23:26:10.536|84   |css_codecs_uti  codecs_vid_get_id 7 bytes 0xe6a0d828 (H263/34)
+
+05-01 23:26:10.546|84   |Added video codec H263
+05-01 23:26:10.560|84   |css_codecs_uti  Set VP8 max resolution 640x480
+
+05-01 23:26:10.569|84   |      ab_vpx.c  vpx default attr
+
+05-01 23:26:10.577|84   |css_codecs_uti  Set H264 profile 66-31 352x288@15 0kbps
+
+05-01 23:26:10.582|84   |css_codecs_uti  Found default infos for this level 31 1280x720@30
+
+05-01 23:26:10.591|84   |css_codecs_uti  Profile is now 42e01f
+
+05-01 23:26:10.599|84   |Set h264 profile : 66, 31, 0
+05-01 23:26:10.608|84   |absua_jni_addo  Set custom OPUS params
+
+05-01 23:26:10.614|84   |Audio codecs : PCMU/8000/1 (79) - PCMA/8000/1 (80) - G729/8000/1 (81) -
+05-01 23:26:10.625|84   |Video codecs : H264 (220) - H263-1998 (210) -
+05-01 23:26:10.639|84   |SDK type: single call
+05-01 23:26:10.649|84   |INITIALIZE: Stack started notify about it
+05-01 23:26:10.661|2    |Event: Initialize state [4]: [Initialization success] notify true
+05-01 23:26:10.668|84   |send event type = 8
+05-01 23:26:10.679|84   |Add all accounts
+05-01 23:26:10.688|2    |Service not null
+05-01 23:26:10.699|84   |We are valid ANYWAY
+05-01 23:26:10.709|84   |We are adding all accounts right now....
+05-01 23:26:10.743|84   |No account found, skip registration
+05-01 23:26:10.753|84   |release wakelock: holder count=1
+05-01 23:26:10.759|84   |Internal receive android.net.conn.CONNECTIVITY_CHANGE
+05-01 23:26:10.764|84   |onConnectivityChanged
+05-01 23:26:10.771|84   |We are valid ANYWAY
+05-01 23:26:10.780|84   |release wakelock: holder count=0
+05-01 23:29:16.464|2    |Method: getCurrentAccountId
+05-01 23:29:16.499|2    |Method: getCurrentAccountId
+05-01 23:29:16.533|2    |Method: getCurrentAccountId
+05-0
